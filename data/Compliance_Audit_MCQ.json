@@ -1,0 +1,565 @@
+{
+  "subject": "Compliance Audit",
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What is a compliance audit?",
+      "options": [
+        "A financial budget review",
+        "A systematic examination to verify adherence to regulations, standards, or policies",
+        "A software testing process",
+        "A hardware inventory check"
+      ],
+      "correct": 1,
+      "explanation": "A compliance audit is a formal review to verify that an organization follows relevant laws, regulations, standards, and internal policies.",
+      "takeaway": "Compliance audit = Verify adherence to rules, standards, and regulations"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What does GDPR stand for?",
+      "options": [
+        "General Data Privacy Regulation",
+        "General Data Protection Regulation",
+        "Global Data Processing Rule",
+        "Government Data Privacy Rights"
+      ],
+      "correct": 1,
+      "explanation": "GDPR (General Data Protection Regulation) is the EU's comprehensive data privacy law regulating how organizations collect, process, and store personal data of EU residents.",
+      "takeaway": "GDPR = EU data protection law (significant fines for non-compliance)"
+    },
+    {
+      "id": 3,
+      "difficulty": "medium",
+      "question": "What is PCI DSS?",
+      "options": [
+        "A government regulation",
+        "Payment Card Industry Data Security Standard \u2014 security standard for card payment handling",
+        "A networking protocol",
+        "An encryption algorithm"
+      ],
+      "correct": 1,
+      "explanation": "PCI DSS is a security standard for all entities that store, process, or transmit payment card information, ensuring cardholder data protection.",
+      "takeaway": "PCI DSS = Security standard for payment card data (12 requirements)"
+    },
+    {
+      "id": 4,
+      "difficulty": "medium",
+      "question": "What is ISO 27001?",
+      "options": [
+        "A network protocol standard",
+        "International standard for information security management systems (ISMS)",
+        "A software development methodology",
+        "A hardware specification"
+      ],
+      "correct": 1,
+      "explanation": "ISO 27001 is the international standard for establishing, implementing, maintaining, and improving an Information Security Management System (ISMS).",
+      "takeaway": "ISO 27001 = International ISMS standard (certification available)"
+    },
+    {
+      "id": 5,
+      "difficulty": "hard",
+      "question": "What is HIPAA and who must comply?",
+      "options": [
+        "IT security standard for all businesses",
+        "US health data privacy law for healthcare providers, insurers, and their business associates",
+        "Financial reporting standard",
+        "European privacy regulation"
+      ],
+      "correct": 1,
+      "explanation": "HIPAA (Health Insurance Portability and Accountability Act) requires US healthcare providers, insurers, and business associates to protect PHI (Protected Health Information).",
+      "takeaway": "HIPAA = US healthcare data privacy (PHI protection required)"
+    },
+    {
+      "id": 6,
+      "difficulty": "medium",
+      "question": "What is a risk assessment in compliance?",
+      "options": [
+        "Financial profit calculation",
+        "Identifying, analyzing, and evaluating risks to organizational assets",
+        "Assigning blame for incidents",
+        "Hiring process evaluation"
+      ],
+      "correct": 1,
+      "explanation": "Risk assessment identifies potential threats, analyzes vulnerabilities and likelihood, evaluates impact, and helps prioritize risk mitigation controls.",
+      "takeaway": "Risk assessment = Identify \u2192 Analyze \u2192 Evaluate \u2192 Prioritize risks"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What is the difference between internal and external audits?",
+      "options": [
+        "No difference",
+        "Internal audits conducted by organization's own staff; external by independent third parties",
+        "External audits are less thorough",
+        "Internal audits are more expensive"
+      ],
+      "correct": 1,
+      "explanation": "Internal audits are performed by the organization's own audit team. External audits are conducted by independent third parties providing unbiased assessment.",
+      "takeaway": "Internal = Self-assessment | External = Independent third-party review"
+    },
+    {
+      "id": 8,
+      "difficulty": "hard",
+      "question": "What is SOC 2 compliance?",
+      "options": [
+        "A network security standard",
+        "AICPA framework for service organizations covering security, availability, processing integrity, confidentiality, privacy",
+        "A payment processing standard",
+        "A government compliance requirement"
+      ],
+      "correct": 1,
+      "explanation": "SOC 2 is an auditing standard from AICPA for service organizations, based on five Trust Services Criteria: Security, Availability, Processing Integrity, Confidentiality, Privacy.",
+      "takeaway": "SOC 2 = Service org audit covering 5 Trust Services Criteria (Type I & II)"
+    },
+    {
+      "id": 9,
+      "difficulty": "medium",
+      "question": "What does 'right to be forgotten' mean under GDPR?",
+      "options": [
+        "Right to change your name",
+        "Right to request deletion of personal data under certain conditions",
+        "Right to anonymous browsing",
+        "Right to opt out of marketing"
+      ],
+      "correct": 1,
+      "explanation": "GDPR Article 17 gives individuals the right to request deletion of their personal data when it's no longer needed, consent is withdrawn, or there's no legitimate purpose.",
+      "takeaway": "Right to be forgotten = Request personal data deletion (GDPR Art. 17)"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What is a data breach notification requirement?",
+      "options": [
+        "Optional reporting to stakeholders",
+        "Mandatory reporting of data breaches to authorities/affected individuals within specified timeframes",
+        "Annual security reporting",
+        "Internal incident documentation"
+      ],
+      "correct": 1,
+      "explanation": "Many regulations (GDPR, HIPAA) require organizations to notify regulators and/or affected individuals within specific timeframes (GDPR: 72 hours) after discovering a data breach.",
+      "takeaway": "Breach notification = Mandatory timely reporting (GDPR: 72hrs to authority)"
+    },
+    {
+      "id": 11,
+      "difficulty": "hard",
+      "question": "What is the NIST Cybersecurity Framework (CSF)?",
+      "options": [
+        "A government mandate",
+        "Voluntary framework with 5 core functions: Identify, Protect, Detect, Respond, Recover",
+        "A payment security standard",
+        "A cloud computing framework"
+      ],
+      "correct": 1,
+      "explanation": "NIST CSF is a voluntary framework for improving cybersecurity risk management, organized around 5 functions: Identify, Protect, Detect, Respond, and Recover.",
+      "takeaway": "NIST CSF = Identify \u2192 Protect \u2192 Detect \u2192 Respond \u2192 Recover"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "What is a control in compliance and audit context?",
+      "options": [
+        "A software switch",
+        "A safeguard or countermeasure to reduce risk or ensure compliance requirements are met",
+        "A network device",
+        "An audit report"
+      ],
+      "correct": 1,
+      "explanation": "A control is any safeguard, practice, or mechanism designed to reduce risk, ensure policy adherence, or meet compliance requirements (technical, administrative, or physical).",
+      "takeaway": "Control = Safeguard to reduce risk (technical/admin/physical types)"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What is due diligence in compliance?",
+      "options": [
+        "Delaying compliance actions",
+        "Reasonable steps taken to satisfy legal and regulatory requirements and avoid harm",
+        "Auditing competitors",
+        "Financial due diligence only"
+      ],
+      "correct": 1,
+      "explanation": "Due diligence means taking reasonable, proactive steps to comply with laws, protect assets, and mitigate risks \u2014 demonstrating responsible governance.",
+      "takeaway": "Due diligence = Proactive reasonable steps to comply and reduce risk"
+    },
+    {
+      "id": 14,
+      "difficulty": "hard",
+      "question": "What is the difference between a policy, standard, procedure, and guideline?",
+      "options": [
+        "All the same",
+        "Policy=high-level mandate, Standard=mandatory requirements, Procedure=step-by-step, Guideline=recommendation",
+        "Procedures are mandatory, rest are optional",
+        "Guidelines are most important"
+      ],
+      "correct": 1,
+      "explanation": "Policy: high-level intent/mandate. Standard: mandatory specific requirements. Procedure: detailed step-by-step implementation. Guideline: non-mandatory recommendations.",
+      "takeaway": "Policy > Standard > Procedure > Guideline (decreasing authority)"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "What is data classification and why is it important in compliance?",
+      "options": [
+        "Sorting files alphabetically",
+        "Categorizing data by sensitivity to apply appropriate protection controls",
+        "Backing up data",
+        "Encrypting all data"
+      ],
+      "correct": 1,
+      "explanation": "Data classification categorizes data (Public, Internal, Confidential, Restricted) based on sensitivity, enabling organizations to apply appropriate protection and comply with regulations.",
+      "takeaway": "Data classification = Categorize by sensitivity \u2192 apply correct controls"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What is an audit trail?",
+      "options": [
+        "A physical walkthrough of facilities",
+        "A chronological record of system activities providing evidence of events",
+        "A compliance certificate",
+        "A network topology map"
+      ],
+      "correct": 1,
+      "explanation": "An audit trail is a chronological record of activities/events in a system, providing evidence for compliance verification, forensic investigation, and accountability.",
+      "takeaway": "Audit trail = Chronological activity log for accountability and investigation"
+    },
+    {
+      "id": 17,
+      "difficulty": "hard",
+      "question": "What is third-party risk management in compliance?",
+      "options": [
+        "Managing risks from competitors",
+        "Assessing and managing security/compliance risks introduced by vendors and partners",
+        "Internal employee risk management",
+        "Financial third-party audits"
+      ],
+      "correct": 1,
+      "explanation": "Third-party risk management evaluates and monitors the security and compliance posture of vendors, suppliers, and partners who have access to your data or systems.",
+      "takeaway": "TPRM = Assess/monitor vendor security risks (your data, their hands)"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What is separation of duties (SoD)?",
+      "options": [
+        "Dividing IT and business teams",
+        "Dividing critical tasks among multiple people to prevent fraud and errors",
+        "Separating network segments",
+        "Job rotation program"
+      ],
+      "correct": 1,
+      "explanation": "Separation of duties divides critical tasks/privileges among multiple individuals so no single person can complete a fraudulent action or critical process alone.",
+      "takeaway": "SoD = No single person controls entire critical process (fraud prevention)"
+    },
+    {
+      "id": 19,
+      "difficulty": "easy",
+      "question": "What is the purpose of penetration testing in compliance?",
+      "options": [
+        "Physical security testing",
+        "Authorized simulated attack to identify vulnerabilities before malicious actors do",
+        "Stress testing servers",
+        "Testing network speed"
+      ],
+      "correct": 1,
+      "explanation": "Penetration testing (pen test) simulates cyberattacks with permission to identify vulnerabilities. Many compliance standards (PCI DSS, ISO 27001) require regular pen testing.",
+      "takeaway": "Pen testing = Authorized attack simulation (required by PCI DSS, ISO 27001)"
+    },
+    {
+      "id": 20,
+      "difficulty": "hard",
+      "question": "What is a Business Continuity Plan (BCP) vs Disaster Recovery Plan (DRP)?",
+      "options": [
+        "Same document",
+        "BCP covers overall business operations during disruption; DRP focuses specifically on IT/technology recovery",
+        "DRP is broader than BCP",
+        "Only large companies need these"
+      ],
+      "correct": 1,
+      "explanation": "BCP ensures critical business functions continue during/after disruptions. DRP is a subset focused specifically on restoring IT systems and data after a disaster.",
+      "takeaway": "BCP = Business continuity | DRP = IT/systems recovery (DRP \u2282 BCP)"
+    },
+    {
+      "id": 21,
+      "difficulty": "easy",
+      "question": "What is the difference between a policy and a procedure?",
+      "options": [
+        "Same document",
+        "Policy = high-level intent/rules; Procedure = step-by-step instructions for implementing the policy",
+        "Procedures are optional",
+        "Policies are more detailed"
+      ],
+      "correct": 1,
+      "explanation": "A policy states what must be done (high-level rules and intent). A procedure explains how to do it (detailed step-by-step implementation instructions).",
+      "takeaway": "Policy = What must be done | Procedure = How to do it (step-by-step)"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What is SOX compliance?",
+      "options": [
+        "A sports regulation",
+        "Sarbanes-Oxley Act \u2014 US law requiring financial reporting controls and audit trails for public companies",
+        "A network security standard",
+        "A data privacy regulation"
+      ],
+      "correct": 1,
+      "explanation": "SOX (Sarbanes-Oxley Act 2002) requires US public companies to maintain accurate financial records, establish internal controls, and have them audited to prevent fraud.",
+      "takeaway": "SOX = US financial reporting integrity law for public companies (Section 404 key)"
+    },
+    {
+      "id": 23,
+      "difficulty": "easy",
+      "question": "What does 'audit evidence' mean?",
+      "options": [
+        "Suspicion of wrongdoing",
+        "Information collected by auditors to evaluate whether controls are working as intended",
+        "A legal judgment",
+        "An audit report"
+      ],
+      "correct": 1,
+      "explanation": "Audit evidence is the data, documentation, observations, and test results auditors gather to support their conclusions about whether controls are effective and compliant.",
+      "takeaway": "Audit evidence = Data collected to support audit conclusions (documents, tests, observations)"
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "What is the difference between SOC 2 Type I and Type II?",
+      "options": [
+        "No difference",
+        "Type I = controls design at a point in time; Type II = controls operating effectiveness over a period (6-12 months)",
+        "Type II is less rigorous",
+        "Type I covers more time"
+      ],
+      "correct": 1,
+      "explanation": "SOC 2 Type I assesses whether controls are suitably designed at a specific date. Type II assesses whether those controls operated effectively over a defined period (usually 6-12 months).",
+      "takeaway": "SOC 2 Type I = Design at a date | Type II = Operating effectiveness over time (more rigorous)"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What is the purpose of a data retention policy?",
+      "options": [
+        "Backup all data forever",
+        "Define how long different types of data must be kept and when it must be destroyed",
+        "Speed up database queries",
+        "Encrypt stored data"
+      ],
+      "correct": 1,
+      "explanation": "A data retention policy specifies how long various data types must be retained (for legal, regulatory, or business reasons) and when/how data must be securely deleted.",
+      "takeaway": "Data retention policy = Defines data keep duration and secure destruction timeline"
+    },
+    {
+      "id": 26,
+      "difficulty": "easy",
+      "question": "What is a finding in an audit report?",
+      "options": [
+        "A positive performance review",
+        "An identified gap, weakness, or non-compliance discovered during the audit",
+        "A legal penalty",
+        "An audit schedule"
+      ],
+      "correct": 1,
+      "explanation": "An audit finding is a documented issue discovered during the audit \u2014 a gap between what should be happening (per policy/standard) and what is actually happening.",
+      "takeaway": "Audit finding = Documented gap between required and actual control state"
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "What is the ISO 31000 standard?",
+      "options": [
+        "An information security standard",
+        "International standard for risk management principles, framework, and process",
+        "A financial reporting standard",
+        "A data privacy standard"
+      ],
+      "correct": 1,
+      "explanation": "ISO 31000 provides principles and guidelines for risk management applicable to any organization, covering risk identification, assessment, treatment, monitoring, and communication.",
+      "takeaway": "ISO 31000 = International risk management standard (principles + process)"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What is a whistleblower policy in compliance?",
+      "options": [
+        "A noise control regulation",
+        "A policy protecting employees who report misconduct, fraud, or violations from retaliation",
+        "A marketing policy",
+        "A data backup procedure"
+      ],
+      "correct": 1,
+      "explanation": "A whistleblower policy establishes safe channels for reporting violations and protects reporters from retaliation \u2014 required by SOX for public companies and many other regulations.",
+      "takeaway": "Whistleblower policy = Safe reporting channels + protection from retaliation"
+    },
+    {
+      "id": 29,
+      "difficulty": "easy",
+      "question": "What does 'scope' mean in an audit?",
+      "options": [
+        "Audit duration only",
+        "The defined boundaries of what the audit will cover \u2014 systems, processes, locations, time period",
+        "The audit team size",
+        "The cost of the audit"
+      ],
+      "correct": 1,
+      "explanation": "Audit scope defines the boundaries: which systems, processes, departments, locations, and time periods are included in the audit \u2014 crucial for focused and effective auditing.",
+      "takeaway": "Audit scope = Defined boundaries of what will and won't be audited"
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "What is continuous monitoring in compliance?",
+      "options": [
+        "Hiring full-time auditors",
+        "Automated ongoing assessment of controls, risks, and compliance status rather than periodic point-in-time audits",
+        "Monthly manual reviews",
+        "Annual compliance checks"
+      ],
+      "correct": 1,
+      "explanation": "Continuous monitoring uses automated tools to provide real-time or near-real-time assessment of security controls and compliance posture, enabling faster detection of control failures.",
+      "takeaway": "Continuous monitoring = Automated real-time compliance/control assessment (not periodic)"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What is the purpose of a Statement of Applicability (SoA) in ISO 27001?",
+      "options": [
+        "A list of all employees",
+        "Document identifying which ISO 27001 controls apply, are implemented, and why some are excluded",
+        "A financial statement",
+        "An audit schedule"
+      ],
+      "correct": 1,
+      "explanation": "The Statement of Applicability (SoA) is a required ISO 27001 document listing all Annex A controls, whether each applies, implementation status, and justification for exclusions.",
+      "takeaway": "SoA = ISO 27001 document mapping applicable controls + exclusion justifications"
+    },
+    {
+      "id": 32,
+      "difficulty": "easy",
+      "question": "What is a corrective action plan (CAP)?",
+      "options": [
+        "A project plan",
+        "A documented plan to fix audit findings, including responsible party, timeline, and remediation steps",
+        "A compliance certificate",
+        "An audit schedule"
+      ],
+      "correct": 1,
+      "explanation": "A CAP documents specific actions to remediate audit findings, including who is responsible, what will be done, and by when \u2014 essential for closing audit gaps.",
+      "takeaway": "CAP = Remediation plan for audit findings (who, what, when)"
+    },
+    {
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What is COBIT in IT governance?",
+      "options": [
+        "A programming language",
+        "A framework for IT governance and management, aligning IT with business goals",
+        "A network security standard",
+        "A cloud computing model"
+      ],
+      "correct": 1,
+      "explanation": "COBIT (Control Objectives for Information Technologies) is a framework by ISACA for IT governance, providing guidance on aligning IT processes with business objectives and regulatory requirements.",
+      "takeaway": "COBIT = IT governance framework by ISACA (aligns IT with business goals)"
+    },
+    {
+      "id": 34,
+      "difficulty": "medium",
+      "question": "What does 'material weakness' mean in auditing?",
+      "options": [
+        "Physical damage to equipment",
+        "A significant deficiency in internal controls that could result in a material misstatement going undetected",
+        "A minor documentation error",
+        "A hardware failure"
+      ],
+      "correct": 1,
+      "explanation": "A material weakness is a significant deficiency or combination of deficiencies in internal controls such that a material misstatement in financial reports might not be prevented or detected.",
+      "takeaway": "Material weakness = Serious control deficiency risking undetected material misstatements"
+    },
+    {
+      "id": 35,
+      "difficulty": "easy",
+      "question": "What is the purpose of segregation of network environments in compliance?",
+      "options": [
+        "Speed up networks",
+        "Separate production, development, and testing environments to prevent unauthorized changes and data exposure",
+        "Save hardware costs",
+        "Simplify network management"
+      ],
+      "correct": 1,
+      "explanation": "Separating environments (production/dev/test) prevents unauthorized access to production data, reduces change-related outages, and is required by PCI DSS and other standards.",
+      "takeaway": "Environment segregation = Separate prod/dev/test (required by PCI DSS, reduces risk)"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What is the difference between risk avoidance, mitigation, transfer, and acceptance?",
+      "options": [
+        "All the same strategy",
+        "Avoidance=stop activity; Mitigation=reduce risk; Transfer=insure/outsource; Acceptance=acknowledge and live with risk",
+        "Transfer is the only valid strategy",
+        "Acceptance means ignoring risk"
+      ],
+      "correct": 1,
+      "explanation": "Four risk treatment options: Avoidance (stop the risky activity), Mitigation (implement controls to reduce likelihood/impact), Transfer (insurance/outsourcing), Acceptance (acknowledge and consciously accept the risk).",
+      "takeaway": "Risk treatment: Avoid | Mitigate | Transfer | Accept \u2014 choose based on cost/benefit"
+    },
+    {
+      "id": 37,
+      "difficulty": "medium",
+      "question": "What is a vulnerability assessment vs a risk assessment?",
+      "options": [
+        "Same thing",
+        "Vulnerability assessment identifies technical weaknesses; risk assessment evaluates likelihood and business impact of all risks",
+        "Risk assessment is only technical",
+        "Vulnerability assessment covers business risk"
+      ],
+      "correct": 1,
+      "explanation": "Vulnerability assessment identifies and catalogs technical weaknesses (open ports, missing patches). Risk assessment is broader \u2014 evaluating likelihood, impact, and business context of all risk types.",
+      "takeaway": "Vulnerability assessment = Technical gaps | Risk assessment = Business impact of all risks"
+    },
+    {
+      "id": 38,
+      "difficulty": "easy",
+      "question": "What is the purpose of an audit log?",
+      "options": [
+        "Speed up system performance",
+        "Chronological record of system activities used for accountability, forensics, and compliance verification",
+        "Backup critical files",
+        "Encrypt sensitive data"
+      ],
+      "correct": 1,
+      "explanation": "Audit logs provide an immutable chronological record of system events and user actions, enabling accountability, incident investigation, and compliance verification.",
+      "takeaway": "Audit log = Immutable activity record for accountability, forensics, compliance"
+    },
+    {
+      "id": 39,
+      "difficulty": "medium",
+      "question": "What is FERPA and who must comply?",
+      "options": [
+        "A financial regulation",
+        "US law protecting privacy of student education records \u2014 applies to educational institutions receiving federal funding",
+        "A healthcare regulation",
+        "A European data law"
+      ],
+      "correct": 1,
+      "explanation": "FERPA (Family Educational Rights and Privacy Act) protects student education records and gives parents/students rights over those records. Applies to schools receiving federal funding.",
+      "takeaway": "FERPA = US student education record privacy law (schools + federal funding)"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What is the difference between prescriptive and risk-based compliance?",
+      "options": [
+        "No difference",
+        "Prescriptive = follow specific mandatory rules; Risk-based = tailor controls based on organization's specific risk profile",
+        "Risk-based is less rigorous",
+        "Prescriptive allows more flexibility"
+      ],
+      "correct": 1,
+      "explanation": "Prescriptive compliance mandates specific controls regardless of context (PCI DSS checklists). Risk-based compliance (ISO 27001) requires organizations to assess their specific risks and implement proportionate controls.",
+      "takeaway": "Prescriptive = Mandatory specific controls | Risk-based = Controls proportional to your risks"
+    }
+  ]
+}

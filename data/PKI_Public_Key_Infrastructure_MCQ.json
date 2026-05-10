@@ -1,0 +1,565 @@
+{
+  "subject": "PKI - Public Key Infrastructure",
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What does PKI stand for?",
+      "options": [
+        "Private Key Interface",
+        "Public Key Infrastructure",
+        "Protocol Key Integration",
+        "Protected Key Identity"
+      ],
+      "correct": 1,
+      "explanation": "PKI stands for Public Key Infrastructure \u2014 a framework of policies, procedures, hardware, software, and people to manage digital certificates and public-key encryption.",
+      "takeaway": "PKI = Framework for managing digital certificates and public-key encryption"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What is a digital certificate?",
+      "options": [
+        "A software license",
+        "An electronic document binding a public key to an identity, signed by a CA",
+        "A type of firewall",
+        "A password manager"
+      ],
+      "correct": 1,
+      "explanation": "A digital certificate is an electronic document that binds a public key to the identity of the owner. It's signed by a trusted Certificate Authority (CA).",
+      "takeaway": "Digital cert = Public key + Identity + CA signature (trust binding)"
+    },
+    {
+      "id": 3,
+      "difficulty": "medium",
+      "question": "What is the role of a Certificate Authority (CA)?",
+      "options": [
+        "Issue IP addresses",
+        "Issue, manage, and revoke digital certificates while verifying identity",
+        "Encrypt network traffic",
+        "Manage firewalls"
+      ],
+      "correct": 1,
+      "explanation": "A CA is a trusted entity that issues digital certificates, verifies the identity of certificate applicants, and can revoke compromised certificates.",
+      "takeaway": "CA = Trusted issuer and validator of digital certificates"
+    },
+    {
+      "id": 4,
+      "difficulty": "medium",
+      "question": "What is a Certificate Revocation List (CRL)?",
+      "options": [
+        "List of approved certificates",
+        "List of revoked certificates that should no longer be trusted",
+        "List of expired certificates",
+        "List of pending certificate requests"
+      ],
+      "correct": 1,
+      "explanation": "A CRL is a list published by a CA containing certificates that have been revoked before their expiration date due to compromise or other reasons.",
+      "takeaway": "CRL = Blacklist of revoked certificates published by the CA"
+    },
+    {
+      "id": 5,
+      "difficulty": "hard",
+      "question": "What is OCSP and how does it differ from CRL?",
+      "options": [
+        "Same as CRL",
+        "OCSP provides real-time certificate status checking vs CRL's periodic download",
+        "OCSP only works offline",
+        "OCSP is older than CRL"
+      ],
+      "correct": 1,
+      "explanation": "OCSP (Online Certificate Status Protocol) allows real-time validation of a single certificate status, unlike CRL which requires downloading a full list periodically.",
+      "takeaway": "OCSP = Real-time single cert check | CRL = Periodic full list download"
+    },
+    {
+      "id": 6,
+      "difficulty": "medium",
+      "question": "What is the purpose of a Root CA vs Intermediate CA?",
+      "options": [
+        "No difference",
+        "Root CA is the ultimate trust anchor; Intermediate CA issues end-entity certificates, reducing Root CA exposure",
+        "Intermediate CA has more trust",
+        "Root CA only handles revocation"
+      ],
+      "correct": 1,
+      "explanation": "Root CA is the ultimate trust anchor kept offline for security. Intermediate CAs are online and issue end-entity certificates, limiting Root CA exposure.",
+      "takeaway": "Root CA = Offline trust anchor | Intermediate CA = Online certificate issuer"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What format is commonly used for digital certificates?",
+      "options": [
+        "PDF",
+        "X.509",
+        "XML",
+        "JSON"
+      ],
+      "correct": 1,
+      "explanation": "X.509 is the standard format for digital certificates used in PKI. It defines the structure including subject, issuer, public key, validity period, and signature.",
+      "takeaway": "X.509 = Standard digital certificate format used in PKI/TLS"
+    },
+    {
+      "id": 8,
+      "difficulty": "hard",
+      "question": "What is a Certificate Signing Request (CSR)?",
+      "options": [
+        "A revoked certificate",
+        "A message sent to a CA requesting a certificate, containing the public key and identity info",
+        "CA's database of certificates",
+        "Certificate renewal notification"
+      ],
+      "correct": 1,
+      "explanation": "A CSR is a block of encoded text containing the applicant's public key and identity information, sent to a CA to request a signed digital certificate.",
+      "takeaway": "CSR = Certificate request sent to CA with public key + identity info"
+    },
+    {
+      "id": 9,
+      "difficulty": "medium",
+      "question": "What is certificate pinning?",
+      "options": [
+        "Physically securing certificates",
+        "Hardcoding specific certificate/public key in an application to prevent MitM attacks",
+        "Pinning certificate to a user account",
+        "Certificate backup process"
+      ],
+      "correct": 1,
+      "explanation": "Certificate pinning embeds a specific certificate or public key in an application, so it only trusts that specific cert and rejects others, preventing MitM attacks.",
+      "takeaway": "Cert pinning = Hardcoded trusted cert \u2192 prevents unauthorized CA attacks"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "In asymmetric encryption, what is the public key used for?",
+      "options": [
+        "Decrypting data only",
+        "Encrypting data and verifying digital signatures",
+        "Signing data only",
+        "Both encrypting and decrypting"
+      ],
+      "correct": 1,
+      "explanation": "The public key is freely shared and used to encrypt data (so only the private key holder can decrypt) and to verify digital signatures created with the private key.",
+      "takeaway": "Public key = Encrypt data + Verify signatures (freely shared)"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "What is a digital signature and what does it provide?",
+      "options": [
+        "An encrypted password",
+        "A hash signed with private key providing authentication, integrity, and non-repudiation",
+        "A type of certificate",
+        "A network protocol"
+      ],
+      "correct": 1,
+      "explanation": "A digital signature is created by hashing data and encrypting with the private key. It provides authentication, data integrity, and non-repudiation.",
+      "takeaway": "Digital signature = Hash + Private key encryption (Auth + Integrity + Non-repudiation)"
+    },
+    {
+      "id": 12,
+      "difficulty": "hard",
+      "question": "What is key escrow in PKI?",
+      "options": [
+        "Destroying private keys",
+        "Storing copies of private keys with a trusted third party for recovery purposes",
+        "Key exchange protocol",
+        "Certificate backup"
+      ],
+      "correct": 1,
+      "explanation": "Key escrow stores copies of private keys with a trusted third party, allowing key recovery in case of employee departure, key loss, or law enforcement needs.",
+      "takeaway": "Key escrow = Third-party private key backup for recovery purposes"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "What protocol uses PKI for securing web traffic?",
+      "options": [
+        "FTP",
+        "HTTP",
+        "TLS/SSL",
+        "SMTP"
+      ],
+      "correct": 2,
+      "explanation": "TLS (Transport Layer Security) and its predecessor SSL use PKI certificates for server authentication and establishing encrypted connections (HTTPS).",
+      "takeaway": "TLS/SSL = Uses PKI certificates for web encryption (HTTPS)"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What does non-repudiation mean in PKI?",
+      "options": [
+        "Denying access to resources",
+        "Inability to deny having sent a message (proven by digital signature)",
+        "Blocking certificate revocation",
+        "Refusing certificate requests"
+      ],
+      "correct": 1,
+      "explanation": "Non-repudiation means a user cannot deny having performed an action. Digital signatures provide non-repudiation \u2014 only the private key holder could have created the signature.",
+      "takeaway": "Non-repudiation = Cannot deny action (digital signature proves it)"
+    },
+    {
+      "id": 15,
+      "difficulty": "hard",
+      "question": "What is a wildcard certificate?",
+      "options": [
+        "A certificate for all users",
+        "A certificate valid for a domain and all its first-level subdomains (*.domain.com)",
+        "An expired certificate",
+        "A self-signed certificate"
+      ],
+      "correct": 1,
+      "explanation": "A wildcard certificate (*.domain.com) secures a domain and all its first-level subdomains with a single certificate, simplifying certificate management.",
+      "takeaway": "Wildcard cert = *.domain.com covers all first-level subdomains"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "What is the difference between DV, OV, and EV certificates?",
+      "options": [
+        "No difference",
+        "Different validation levels: DV=domain only, OV=organization verified, EV=extensive identity verification",
+        "Different encryption strengths",
+        "Different file formats"
+      ],
+      "correct": 1,
+      "explanation": "DV (Domain Validation) only verifies domain ownership. OV (Organization Validation) verifies organization identity. EV (Extended Validation) requires extensive vetting.",
+      "takeaway": "DV < OV < EV in validation rigor (EV = highest trust level)"
+    },
+    {
+      "id": 17,
+      "difficulty": "hard",
+      "question": "What is a trust chain (chain of trust) in PKI?",
+      "options": [
+        "Blockchain technology",
+        "Hierarchical certificate validation path from end-entity cert up to trusted Root CA",
+        "A series of passwords",
+        "Network routing path"
+      ],
+      "correct": 1,
+      "explanation": "The chain of trust is the validation path: End-entity cert \u2192 Intermediate CA \u2192 Root CA. Each certificate is signed by the one above it, rooted in a trusted Root CA.",
+      "takeaway": "Chain of trust = End cert \u2192 Intermediate CA \u2192 Root CA (validation path)"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What algorithm is commonly used for key exchange in TLS?",
+      "options": [
+        "AES",
+        "MD5",
+        "Diffie-Hellman / ECDHE",
+        "SHA-256"
+      ],
+      "correct": 2,
+      "explanation": "Diffie-Hellman (DH) and its elliptic curve variant ECDHE enable secure key exchange over unsecured channels. ECDHE also provides Perfect Forward Secrecy.",
+      "takeaway": "DH/ECDHE = Secure key exchange (ECDHE provides Perfect Forward Secrecy)"
+    },
+    {
+      "id": 19,
+      "difficulty": "easy",
+      "question": "What is a self-signed certificate?",
+      "options": [
+        "A certificate signed by a Root CA",
+        "A certificate where the issuer and subject are the same entity (not from a CA)",
+        "A certificate with no expiry",
+        "A wildcard certificate"
+      ],
+      "correct": 1,
+      "explanation": "A self-signed certificate is signed by the entity it identifies rather than by a trusted CA. It's not trusted by browsers by default but useful for internal/test use.",
+      "takeaway": "Self-signed = No CA validation \u2192 not trusted by browsers (dev/internal use)"
+    },
+    {
+      "id": 20,
+      "difficulty": "hard",
+      "question": "What is Perfect Forward Secrecy (PFS)?",
+      "options": [
+        "Permanent encryption of old sessions",
+        "Property where session keys are not compromised even if server's long-term private key is stolen later",
+        "Forward-only data transmission",
+        "Certificate auto-renewal"
+      ],
+      "correct": 1,
+      "explanation": "PFS ensures that session keys derived using ephemeral key exchange (like ECDHE) are not compromised even if the server's private key is later stolen.",
+      "takeaway": "PFS = Past sessions safe even if private key later compromised (ECDHE)"
+    },
+    {
+      "id": 21,
+      "difficulty": "easy",
+      "question": "What hashing algorithm is recommended for digital signatures today?",
+      "options": [
+        "MD5",
+        "SHA-1",
+        "SHA-256 or SHA-3",
+        "DES"
+      ],
+      "correct": 2,
+      "explanation": "SHA-256 (part of SHA-2 family) and SHA-3 are currently recommended. MD5 and SHA-1 are cryptographically broken and should not be used for security purposes.",
+      "takeaway": "SHA-256/SHA-3 = Secure hashing (MD5 & SHA-1 are broken/deprecated)"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What is the purpose of a timestamp authority (TSA)?",
+      "options": [
+        "Assign IP addresses",
+        "Provide trusted timestamps proving a document/signature existed at a specific time",
+        "Issue digital certificates",
+        "Revoke expired certificates"
+      ],
+      "correct": 1,
+      "explanation": "A Timestamp Authority (TSA) generates trusted timestamps (RFC 3161) proving that data existed at a specific point in time, supporting long-term validity of digital signatures.",
+      "takeaway": "TSA = Trusted timestamp proving data existed at specific time (RFC 3161)"
+    },
+    {
+      "id": 23,
+      "difficulty": "easy",
+      "question": "What is the difference between encryption and hashing?",
+      "options": [
+        "No difference",
+        "Encryption is reversible (requires key); hashing is one-way (irreversible)",
+        "Hashing requires a key",
+        "Encryption cannot be reversed"
+      ],
+      "correct": 1,
+      "explanation": "Encryption transforms data using a key and can be reversed with the correct key (decryption). Hashing produces a fixed-size fingerprint that cannot be reversed to original data.",
+      "takeaway": "Encryption = Reversible (with key) | Hashing = One-way, irreversible"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What is certificate transparency (CT)?",
+      "options": [
+        "Making certificates public",
+        "A public log of all issued certificates allowing detection of misissued or fraudulent certificates",
+        "A certificate revocation method",
+        "A type of certificate pinning"
+      ],
+      "correct": 1,
+      "explanation": "Certificate Transparency is a public, append-only log of all SSL/TLS certificates issued by CAs. It enables detection of misissued, rogue, or fraudulent certificates.",
+      "takeaway": "Certificate Transparency = Public log of all issued certs (detects rogue CAs)"
+    },
+    {
+      "id": 25,
+      "difficulty": "hard",
+      "question": "What is the RSA algorithm and what is it based on?",
+      "options": [
+        "A symmetric encryption algorithm based on XOR",
+        "An asymmetric algorithm based on the mathematical difficulty of factoring large prime numbers",
+        "A hashing algorithm",
+        "A key exchange protocol only"
+      ],
+      "correct": 1,
+      "explanation": "RSA is an asymmetric encryption algorithm whose security relies on the mathematical difficulty of factoring the product of two large prime numbers (the basis of its key generation).",
+      "takeaway": "RSA = Asymmetric encryption based on difficulty of prime number factorization"
+    },
+    {
+      "id": 26,
+      "difficulty": "easy",
+      "question": "What does 'key length' mean in cryptography?",
+      "options": [
+        "Physical size of the key file",
+        "Number of bits in the cryptographic key \u2014 longer = more secure but slower",
+        "Speed of encryption",
+        "Number of characters in a password"
+      ],
+      "correct": 1,
+      "explanation": "Key length is the number of bits in a cryptographic key. Longer keys (e.g., AES-256 vs AES-128) provide exponentially more security but require slightly more computation.",
+      "takeaway": "Key length = Bits in key (longer = more secure, AES-256 > AES-128)"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What is a man-in-the-middle attack in the context of PKI?",
+      "options": [
+        "A physical attack on servers",
+        "Attacker intercepts communications and presents a fake certificate to impersonate a legitimate server",
+        "Breaking encryption mathematically",
+        "Stealing private keys physically"
+      ],
+      "correct": 1,
+      "explanation": "In PKI, a MitM attacker intercepts the connection and presents a fraudulent certificate (if the victim doesn't verify the CA chain properly) to decrypt and relay traffic.",
+      "takeaway": "PKI MitM = Fake certificate presented to intercept encrypted traffic"
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "What is PKCS and why is it important?",
+      "options": [
+        "A certificate revocation protocol",
+        "A family of public-key cryptography standards defining formats for keys, certificates, and messages",
+        "A hashing standard",
+        "A network protocol"
+      ],
+      "correct": 1,
+      "explanation": "PKCS (Public-Key Cryptography Standards) is a family of standards (PKCS#1 RSA, PKCS#7 signed data, PKCS#10 CSR, PKCS#12 key store) defining interoperable crypto formats.",
+      "takeaway": "PKCS = Standards family for crypto formats (PKCS#12=key store, PKCS#10=CSR)"
+    },
+    {
+      "id": 29,
+      "difficulty": "easy",
+      "question": "What is a .pem file?",
+      "options": [
+        "A video file",
+        "A Base64-encoded certificate or key file with header/footer markers",
+        "A compressed archive",
+        "A database file"
+      ],
+      "correct": 1,
+      "explanation": "PEM (Privacy Enhanced Mail) is a Base64-encoded format for certificates and keys, delimited by -----BEGIN CERTIFICATE----- / -----END CERTIFICATE----- headers.",
+      "takeaway": "PEM = Base64-encoded cert/key format (-----BEGIN CERTIFICATE-----)"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What is the purpose of key wrapping?",
+      "options": [
+        "Physically protecting hardware keys",
+        "Encrypting a cryptographic key with another key for secure storage or transport",
+        "Hashing key material",
+        "Generating new keys"
+      ],
+      "correct": 1,
+      "explanation": "Key wrapping encrypts a cryptographic key with a Key Encryption Key (KEK) for secure storage or transport. The wrapped key can only be used after unwrapping with the KEK.",
+      "takeaway": "Key wrapping = Encrypting one key with another KEK for secure transport/storage"
+    },
+    {
+      "id": 31,
+      "difficulty": "hard",
+      "question": "What is elliptic curve cryptography (ECC) and its advantage over RSA?",
+      "options": [
+        "A symmetric algorithm",
+        "Asymmetric cryptography based on elliptic curves providing same security as RSA with much smaller key sizes",
+        "A hashing algorithm",
+        "A certificate format"
+      ],
+      "correct": 1,
+      "explanation": "ECC provides equivalent security to RSA with much smaller keys (256-bit ECC \u2248 3072-bit RSA), resulting in faster operations, less bandwidth, and lower power consumption.",
+      "takeaway": "ECC = Smaller keys, same security as RSA (256-bit ECC \u2248 3072-bit RSA)"
+    },
+    {
+      "id": 32,
+      "difficulty": "easy",
+      "question": "What does SSL stand for and is it still used?",
+      "options": [
+        "Secure Socket Layer \u2014 still widely used",
+        "Secure Socket Layer \u2014 deprecated and replaced by TLS",
+        "Standard Security Layer \u2014 current standard",
+        "Secure Session Link \u2014 used in VPNs"
+      ],
+      "correct": 1,
+      "explanation": "SSL (Secure Sockets Layer) is the predecessor to TLS. All SSL versions (2.0, 3.0) are deprecated due to critical vulnerabilities. TLS 1.2 and 1.3 are the current standards.",
+      "takeaway": "SSL = Deprecated (all versions broken), replaced by TLS 1.2/1.3"
+    },
+    {
+      "id": 33,
+      "difficulty": "medium",
+      "question": "What is certificate pinning in mobile applications?",
+      "options": [
+        "Storing certificates on a USB drive",
+        "Hardcoding trusted certificates/public keys in app code to reject unexpected certificates",
+        "Certificate backup method",
+        "Storing certificates in a database"
+      ],
+      "correct": 1,
+      "explanation": "Certificate pinning embeds a specific certificate or public key hash in the app, rejecting any other certificate even if signed by a trusted CA \u2014 prevents MitM via rogue CA.",
+      "takeaway": "Cert pinning = Hardcoded expected cert/key in app (rejects all others including rogue CA)"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What is a registration authority (RA) in PKI?",
+      "options": [
+        "A type of certificate",
+        "An entity that verifies certificate applicant identity on behalf of the CA before the CA issues the cert",
+        "A certificate revocation server",
+        "A key generation service"
+      ],
+      "correct": 1,
+      "explanation": "An RA (Registration Authority) handles identity verification of certificate applicants, offloading this work from the CA. The CA then issues the certificate based on RA's verification.",
+      "takeaway": "RA = Verifies applicant identity on CA's behalf (CA issues, RA verifies)"
+    },
+    {
+      "id": 35,
+      "difficulty": "easy",
+      "question": "What is the validity period of a typical SSL/TLS certificate?",
+      "options": [
+        "10 years",
+        "5 years",
+        "Maximum 398 days (approximately 13 months)",
+        "Unlimited"
+      ],
+      "correct": 2,
+      "explanation": "Since 2020, browsers limit publicly trusted TLS certificates to 398 days (approximately 13 months) maximum. Shorter validity reduces the risk window of compromised certificates.",
+      "takeaway": "TLS cert max validity = 398 days (reduced to limit compromise exposure window)"
+    },
+    {
+      "id": 36,
+      "difficulty": "medium",
+      "question": "What is the difference between signing a certificate and encrypting data?",
+      "options": [
+        "No difference",
+        "Signing uses private key to prove authenticity; encrypting uses public key to protect confidentiality",
+        "Both use the same key",
+        "Signing uses public key"
+      ],
+      "correct": 1,
+      "explanation": "Digital signing uses the sender's private key to prove authenticity and integrity. Encryption uses the recipient's public key so only they can decrypt with their private key.",
+      "takeaway": "Sign = Private key (prove authenticity) | Encrypt = Recipient's public key (confidentiality)"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What is a cross-certificate in PKI?",
+      "options": [
+        "A certificate for multiple domains",
+        "A certificate issued by one CA to another CA, establishing trust between separate PKI hierarchies",
+        "An expired certificate",
+        "A wildcard certificate"
+      ],
+      "correct": 1,
+      "explanation": "Cross-certificates allow two separate PKI hierarchies to establish mutual trust. CA-A issues a certificate to CA-B, allowing CA-B's certificates to be trusted by CA-A's relying parties.",
+      "takeaway": "Cross-certificate = Bridge trust between separate PKI hierarchies"
+    },
+    {
+      "id": 38,
+      "difficulty": "easy",
+      "question": "What does 'CA bundle' mean?",
+      "options": [
+        "A zip file of certificates",
+        "A file containing multiple CA certificates (root + intermediate) needed to complete the trust chain",
+        "A type of encryption",
+        "A private key container"
+      ],
+      "correct": 1,
+      "explanation": "A CA bundle (or certificate chain file) contains the intermediate and root CA certificates needed to complete the chain of trust from a server's certificate up to a trusted root.",
+      "takeaway": "CA bundle = Intermediate + Root certs to complete the chain of trust"
+    },
+    {
+      "id": 39,
+      "difficulty": "medium",
+      "question": "What is DANE (DNS-based Authentication of Named Entities)?",
+      "options": [
+        "A certificate authority",
+        "A protocol using DNSSEC to bind TLS certificates to domain names, reducing reliance on CAs",
+        "A type of firewall",
+        "An email authentication protocol"
+      ],
+      "correct": 1,
+      "explanation": "DANE (RFC 6698) uses DNSSEC-secured DNS records (TLSA records) to publish and verify TLS certificate bindings, reducing dependency on the CA ecosystem.",
+      "takeaway": "DANE = Use DNSSEC to bind TLS certs to domains (TLSA records, less CA reliance)"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What is quantum computing's threat to current PKI?",
+      "options": [
+        "No threat",
+        "Shor's algorithm on quantum computers can break RSA/ECC by efficiently factoring primes/solving discrete logs",
+        "Quantum computers are too slow",
+        "Only symmetric encryption is threatened"
+      ],
+      "correct": 1,
+      "explanation": "Shor's algorithm running on a sufficiently powerful quantum computer could break RSA and ECC by solving their underlying math problems efficiently, threatening current PKI. Post-quantum cryptography (NIST standards) is being developed.",
+      "takeaway": "Quantum threat = Shor's algorithm breaks RSA/ECC \u2192 post-quantum crypto needed"
+    }
+  ]
+}

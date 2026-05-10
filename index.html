@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ping_exams — MCQ Exam Preparation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles/style.css"/>
+</head>
+<body>
+
+<canvas id="bgCanvas" class="bg-canvas"></canvas>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-link">
+      <svg width="200" height="48" viewBox="0 0 200 48" xmlns="http://www.w3.org/2000/svg">
+        <text x="4" y="36" font-family="Caveat,cursive" font-size="32" font-weight="800" fill="var(--logo-dark)">ping</text>
+        <text x="52" y="36" font-family="Caveat,cursive" font-size="32" font-weight="800" fill="#e67e22">_exams</text>
+        <!-- <circle cx="178" cy="25" r="5" fill="#27ae60"/> -->
+      </svg>
+    </a>
+    <div class="header-right">
+      <div class="clock-widget">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span id="liveClock" class="live-clock">--:--:--</span>
+        <span id="timezoneLabel" class="tz-label"></span>
+      </div>
+      <div class="theme-toggle-group">
+        <button class="theme-btn" id="btn-light" title="Light" onclick="setTheme('light')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="theme-btn" id="btn-dark" title="Dark" onclick="setTheme('dark')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="theme-btn" id="btn-system" title="System" onclick="setTheme('system')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-section">
+  <div class="hero-content">
+    <div class="hero-badge">&#9679; MCQ Exam Prep Platform</div>
+    <h1 class="hero-title">Master Your<br><span class="hero-accent">Certifications.</span></h1>
+    <p class="hero-sub">Practice smart with curated MCQs across Networking, Security, OS, DevOps, Forensics and more. Three modes — Practice, Exam, Infinity.</p>
+    <div class="hero-stats">
+      <div class="stat-pill"><span class="stat-num">9</span><span class="stat-lbl">Subjects</span></div>
+      <div class="stat-pill"><span class="stat-num">180+</span><span class="stat-lbl">Questions</span></div>
+      <div class="stat-pill"><span class="stat-num">3</span><span class="stat-lbl">Modes</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="terminal-card">
+      <div class="term-header">
+        <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+        <span class="term-title">ping_exams ~ terminal</span>
+      </div>
+      <div class="term-body">
+        <p><span class="t-prompt">$</span> <span class="t-cmd">ping_exams --start</span></p>
+        <p class="t-out">Loading quiz engine... <span class="t-ok">✓</span></p>
+        <p class="t-out">9 subjects ready... <span class="t-ok">✓</span></p>
+        <p class="t-out">Restoring session... <span class="t-ok">✓</span></p>
+        <p class="t-out">Randomizing order... <span class="t-ok">✓</span></p>
+        <p><span class="t-prompt">$</span> <span class="t-cmd t-blink">_</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUBJECTS GRID -->
+<section class="subjects-section">
+  <div class="section-header">
+    <h2 class="section-title">Choose Your Subject</h2>
+    <p class="section-sub">Click any subject card to start — your progress auto-saves.</p>
+  </div>
+
+  <div class="subjects-grid">
+
+    <a href="quiz.html?subject=FCN" class="subject-card">
+      <div class="card-icon-wrap" style="--c:#3498db">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--c)" stroke-width="2"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><line x1="12" y1="7" x2="5" y2="17"/><line x1="12" y1="7" x2="19" y2="17"/><line x1="5" y1="19" x2="19" y2="19"/></svg>
+      </div>
+      <div class="card-body">
+        <span class="card-tag" style="--c:#3498db">Networking</span>
+        <h3 class="card-name">FCN</h3>
+        <p class="card-desc">Fundamentals of Computer Networking</p>
+        <div class="card-footer"><span class="q-count">500+ Questions</span><span class="diff-badge">Mixed</span></div>
+      </div>
+      <span class="card-arr">&#8594;</span>
+    </a>
+
+    <a href="quiz.html?subject=COSA" class="subject-card">
+      <div class="card-icon-wrap" style="--c:#8e44ad">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--c)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      </div>
+      <div class="card-body">
+        <span class="card-tag" style="--c:#8e44ad">OS &amp; Admin</span>
+        <h3 class="card-name">COSA</h3>
+        <p class="card-desc">Concepts of Operating System and Administration</p>
+        <div class="card-footer"><span class="q-count">500+ Questions</span><span class="diff-badge">Mixed</span></div>
+      </div>
+      <span class="card-arr">&#8594;</span>
+    </a>
+
+    <a href="quiz.html?subject=Compliance" class="subject-card">
+      <div class="card-icon-wrap" style="--c:#27ae60">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--c)" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      </div>
+      <div class="card-body">
+        <span class="card-tag" style="--c:#27ae60">Compliance</span>
+        <h3 class="card-name">Compliance Audit</h3>
+        <p class="card-desc">Regulatory compliance, auditing standards &amp; frameworks</p>
+        <div class="card-footer"><span class="q-count">500+ Questions</span><span class="diff-badge">Mixed</span></div>
+      </div>
+      <span class="card-arr">&#8594;</span>
+    </a>
+
+    <a href="quiz.html?subject=CyberForensics" class="subject-card">
+      <div class="card-icon-wrap" style="--c:#e67e22">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--c)" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </div>
+      <div class="card-body">
+        <span class="card-tag" style="--c:#e67e22">Forensics</span>
+        <h3 class="card-name">Cyber Forensics</h3>
+        <p class="card-desc">Digital evidence, investigation tools &amp; chain of custody</p>
+        <div class="card-footer"><span class="q-count">500+ Questions</span><span class="diff-badge">Mixed</span></div>
+      </div>
+      <span class="card-arr">&#8594;</span>
+    </a>
+
+    <a href="quiz.html?subject=NDC" class="subject-card">
+      <div class="card-icon-wrap" style="--c:#e74c3c">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--c)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="card-body">
+        <span class="card-tag" style="--c:#e74c3c">Defense</span>
+        <h3 class="card-name">NDC</h3>
+        <p class="card-desc">Network Defense and Countermeasures</p>
+        <div class="card-footer"><span class="q-count">500+ Questions</span><span class="diff-badge">Mixed</span></div>
+      </div>
+      <span class="card-arr">&#8594;</span>
+    </a>
+
+    <a href="quiz.html?subject=DevOps" class="subject-card">
+      <div class="card-icon-wrap" style="--c:#1abc9c">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--c)" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      </div>
+      <div class="card-body">
+        <span class="card-tag" style="--c:#1abc9c">DevOps</span>
+        <h3 class="card-name">IT DevOps</h3>
+        <p class="card-desc">IT Infrastructure Management &amp; DevOps practices</p>
+        <div class="card-footer"><span class="q-count">500+ Questions</span><span class="diff-badge">Mixed</span></div>
+      </div>
+      <span class="card-arr">&#8594;</span>
+    </a>
+
+    <a href="quiz.html?subject=Security" class="subject-card">
+      <div class="card-icon-wrap" style="--c:#c0392b">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--c)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      </div>
+      <div class="card-body">
+        <span class="card-tag" style="--c:#c0392b">Security</span>
+        <h3 class="card-name">Security Concepts</h3>
+        <p class="card-desc">Core cybersecurity concepts, threats &amp; countermeasures</p>
+        <div class="card-footer"><span class="q-count">500+ Questions</span><span class="diff-badge">Mixed</span></div>
+      </div>
+      <span class="card-arr">&#8594;</span>
+    </a>
+
+    <a href="quiz.html?subject=PKI" class="subject-card">
+      <div class="card-icon-wrap" style="--c:#f39c12">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--c)" stroke-width="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+      </div>
+      <div class="card-body">
+        <span class="card-tag" style="--c:#f39c12">PKI</span>
+        <h3 class="card-name">PKI</h3>
+        <p class="card-desc">Public Key Infrastructure, certificates &amp; cryptography</p>
+        <div class="card-footer"><span class="q-count">500+ Questions</span><span class="diff-badge">Mixed</span></div>
+      </div>
+      <span class="card-arr">&#8594;</span>
+    </a>
+
+    <a href="quiz.html?subject=Programming" class="subject-card">
+      <div class="card-icon-wrap" style="--c:#2980b9">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--c)" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      </div>
+      <div class="card-body">
+        <span class="card-tag" style="--c:#2980b9">Programming</span>
+        <h3 class="card-name">Programming</h3>
+        <p class="card-desc">Programming concepts, data structures &amp; algorithms</p>
+        <div class="card-footer"><span class="q-count">500+ Questions</span><span class="diff-badge">Mixed</span></div>
+      </div>
+      <span class="card-arr">&#8594;</span>
+    </a>
+
+    <a href="quiz.html?subject=Ports" class="subject-card">
+      <div class="card-icon-wrap" style="--c:#16a085">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--c)" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="12" y1="8" x2="12" y2="16"/></svg>
+      </div>
+      <div class="card-body">
+        <span class="card-tag" style="--c:#16a085">Ports</span>
+        <h3 class="card-name">Ports</h3>
+        <p class="card-desc">Network port numbers, protocols &amp; services cheatsheet</p>
+        <div class="card-footer"><span class="q-count">500+ Questions</span><span class="diff-badge">Mixed</span></div>
+      </div>
+      <span class="card-arr">&#8594;</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- PORT CHEATSHEET COLLAPSIBLE — homepage only -->
+<section class="home-cheatsheet-wrap">
+  <div class="cheat-collapse-btn" id="cheatToggle" onclick="toggleHomeCheat()">
+    <div class="cheat-btn-left">
+      <span class="cheat-btn-icon">🔌</span>
+      <div>
+        <div class="cheat-btn-title">Port Numbers Cheatsheet</div>
+        <div class="cheat-btn-sub">Complete reference — Port &middot; Protocol &middot; Service Name</div>
+      </div>
+    </div>
+    <span class="cheat-chevron" id="cheatChevron">&#9660;</span>
+  </div>
+
+  <div class="home-cheat-body" id="homeCheatBody" style="display:none">
+    <div class="cheat-search-row">
+      <input type="text" class="port-search" id="homePortSearch" placeholder="&#128269; Search port number or service..." oninput="homeFilterPorts(this.value)" />
+      <span class="cheat-count" id="homeCheatCount"></span>
+    </div>
+    <div class="home-cheat-list" id="homeCheatGrid">
+      <div class="hcl-header">
+        <span class="hcl-h-port">Port</span>
+        <span class="hcl-h-proto">Protocol</span>
+        <span class="hcl-h-service">Service / Description</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <p>ping_exams &copy; 2025 &mdash; Built for serious exam preparation.</p>
+</footer>
+
+<script src="scripts/app.js"></script>
+</body>
+</html>

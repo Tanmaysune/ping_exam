@@ -1,0 +1,565 @@
+{
+  "subject": "Cyber Forensics",
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What is digital forensics?",
+      "options": [
+        "Designing secure networks",
+        "Scientific process of collecting, preserving, analyzing, and presenting digital evidence",
+        "Encrypting digital data",
+        "Monitoring network traffic"
+      ],
+      "correct": 1,
+      "explanation": "Digital forensics is the application of scientific methods to collect, preserve, analyze, and present digital evidence from electronic devices in a legally admissible way.",
+      "takeaway": "Digital forensics = Scientific evidence collection from digital devices (legally admissible)"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What is the chain of custody in forensics?",
+      "options": [
+        "Network security chain",
+        "Documented record of evidence handling from collection to court presentation",
+        "Encryption key management",
+        "Backup verification process"
+      ],
+      "correct": 1,
+      "explanation": "Chain of custody documents every person who handled evidence, when, and how \u2014 ensuring evidence integrity and admissibility in legal proceedings.",
+      "takeaway": "Chain of custody = Evidence handling log (integrity + legal admissibility)"
+    },
+    {
+      "id": 3,
+      "difficulty": "medium",
+      "question": "What is a forensic image?",
+      "options": [
+        "A photograph of a crime scene",
+        "Bit-for-bit exact copy of a storage device including deleted files and slack space",
+        "A compressed backup",
+        "An encrypted drive copy"
+      ],
+      "correct": 1,
+      "explanation": "A forensic image is a bit-for-bit exact copy of a storage device, capturing all data including deleted files, slack space, and unallocated space \u2014 without altering the original.",
+      "takeaway": "Forensic image = Exact bit-for-bit copy (captures deleted files + all data)"
+    },
+    {
+      "id": 4,
+      "difficulty": "medium",
+      "question": "Why is write-blocking important in forensics?",
+      "options": [
+        "To speed up evidence collection",
+        "To prevent any modifications to the original evidence during investigation",
+        "To encrypt evidence",
+        "To compress evidence files"
+      ],
+      "correct": 1,
+      "explanation": "Write blockers prevent any data from being written to the original evidence device during examination, preserving its original state and ensuring evidence integrity.",
+      "takeaway": "Write blocker = Prevents altering original evidence during examination"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What does MD5/SHA hash verification do in forensics?",
+      "options": [
+        "Encrypts evidence",
+        "Verifies that the forensic copy is identical to the original (integrity check)",
+        "Compresses evidence files",
+        "Speeds up evidence collection"
+      ],
+      "correct": 1,
+      "explanation": "Hashing (MD5/SHA-256) creates a unique fingerprint of the evidence. If the hash of the copy matches the original, the copy is proven identical \u2014 evidence integrity confirmed.",
+      "takeaway": "Hash verification = Proves forensic copy is identical to original"
+    },
+    {
+      "id": 6,
+      "difficulty": "hard",
+      "question": "What is volatile vs non-volatile evidence?",
+      "options": [
+        "Same type of evidence",
+        "Volatile = RAM/temp data lost on shutdown; Non-volatile = persistent storage (HDD/SSD)",
+        "Volatile is more reliable",
+        "Non-volatile only includes cloud data"
+      ],
+      "correct": 1,
+      "explanation": "Volatile evidence (RAM, running processes, network connections) is lost when the device is powered off. Non-volatile evidence (HDD, SSD, flash) persists after shutdown.",
+      "takeaway": "Volatile = RAM (collect first, lost on shutdown) | Non-volatile = Disk (persistent)"
+    },
+    {
+      "id": 7,
+      "difficulty": "medium",
+      "question": "What is the order of volatility in forensics?",
+      "options": [
+        "Disk \u2192 RAM \u2192 Network \u2192 CPU registers",
+        "CPU registers \u2192 RAM \u2192 Network \u2192 Disk \u2192 Removable media \u2192 Backups",
+        "Backups \u2192 Disk \u2192 RAM \u2192 CPU",
+        "Network \u2192 Disk \u2192 RAM \u2192 CPU"
+      ],
+      "correct": 1,
+      "explanation": "Order of volatility (most to least volatile): CPU registers/cache \u2192 RAM \u2192 Network state \u2192 Running processes \u2192 Disk \u2192 Removable media \u2192 Backups/remote logging.",
+      "takeaway": "Collect most volatile first: CPU \u2192 RAM \u2192 Network \u2192 Disk \u2192 Backups"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What are the main phases of a digital forensics investigation?",
+      "options": [
+        "Plan, Execute, Report",
+        "Identification, Collection, Preservation, Analysis, Presentation",
+        "Scan, Collect, Delete",
+        "Access, Copy, Submit"
+      ],
+      "correct": 1,
+      "explanation": "The forensic investigation process: Identification (what's relevant) \u2192 Collection \u2192 Preservation \u2192 Examination/Analysis \u2192 Presentation in court.",
+      "takeaway": "Forensics phases: Identify \u2192 Collect \u2192 Preserve \u2192 Analyze \u2192 Present"
+    },
+    {
+      "id": 9,
+      "difficulty": "hard",
+      "question": "What is file carving in digital forensics?",
+      "options": [
+        "Physically cutting hard drives",
+        "Recovering files from raw data based on file signatures without filesystem metadata",
+        "Encrypting recovered files",
+        "Compressing file system data"
+      ],
+      "correct": 1,
+      "explanation": "File carving recovers files from raw disk data by looking for known file headers/footers (magic bytes), useful when the filesystem is damaged or files are deleted.",
+      "takeaway": "File carving = Recover files from raw data using header/footer signatures"
+    },
+    {
+      "id": 10,
+      "difficulty": "medium",
+      "question": "What is steganography?",
+      "options": [
+        "A type of encryption",
+        "Hiding data within ordinary files (images, audio) to conceal its existence",
+        "A network protocol",
+        "A forensic tool"
+      ],
+      "correct": 1,
+      "explanation": "Steganography hides secret data within ordinary-looking files (images, audio, video) without visibly altering them \u2014 concealing the existence of the hidden data.",
+      "takeaway": "Steganography = Hide data inside innocent files (not encryption, concealment)"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What is a forensic timeline?",
+      "options": [
+        "Project schedule",
+        "Chronological record of file/system activities to reconstruct what happened and when",
+        "Court hearing schedule",
+        "Evidence storage log"
+      ],
+      "correct": 1,
+      "explanation": "A forensic timeline reconstructs events chronologically using timestamps (created, modified, accessed) from files, logs, and system artifacts to establish what happened.",
+      "takeaway": "Forensic timeline = Chronological event reconstruction from timestamps"
+    },
+    {
+      "id": 12,
+      "difficulty": "hard",
+      "question": "What is anti-forensics?",
+      "options": [
+        "Forensic defense techniques",
+        "Techniques used to hinder, prevent, or mislead forensic investigations",
+        "Defensive security tools",
+        "Evidence preservation"
+      ],
+      "correct": 1,
+      "explanation": "Anti-forensics encompasses techniques used to obstruct investigations: data wiping, encryption, timestomping, steganography, log deletion, and rootkits.",
+      "takeaway": "Anti-forensics = Obstruct investigation (wiping, timestomping, encryption)"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "What is a registry hive in Windows forensics?",
+      "options": [
+        "A network configuration",
+        "A file containing a portion of the Windows Registry (settings, user activity, installed software)",
+        "A malware type",
+        "A network log file"
+      ],
+      "correct": 1,
+      "explanation": "Windows Registry hives are files storing registry data (SYSTEM, SOFTWARE, SAM, NTUSER.DAT). They contain system config, user activity, installed software \u2014 goldmine for forensics.",
+      "takeaway": "Registry hives = Rich forensic artifacts (user activity, config, software)"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "What is network forensics?",
+      "options": [
+        "Designing networks",
+        "Capturing, recording, and analyzing network traffic to investigate incidents",
+        "Network performance testing",
+        "Firewall configuration"
+      ],
+      "correct": 1,
+      "explanation": "Network forensics involves capturing and analyzing network packets/logs to reconstruct attack timelines, identify attackers, and understand data exfiltration.",
+      "takeaway": "Network forensics = Packet/log analysis to reconstruct network incidents"
+    },
+    {
+      "id": 15,
+      "difficulty": "hard",
+      "question": "What tool is commonly used for memory forensics?",
+      "options": [
+        "Nmap",
+        "Wireshark",
+        "Volatility",
+        "Metasploit"
+      ],
+      "correct": 2,
+      "explanation": "Volatility is the leading open-source memory forensics framework for analyzing RAM dumps \u2014 extracting running processes, network connections, encryption keys, and malware.",
+      "takeaway": "Volatility = Industry standard RAM forensics tool"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What is the difference between live forensics and dead-box forensics?",
+      "options": [
+        "No difference",
+        "Live = system powered on (captures volatile data); Dead-box = powered off (disk only)",
+        "Dead-box is more comprehensive",
+        "Live forensics only for servers"
+      ],
+      "correct": 1,
+      "explanation": "Live forensics examines a running system to capture volatile data (RAM, processes, connections). Dead-box forensics examines powered-off systems using forensic disk images.",
+      "takeaway": "Live = Running system (volatile+disk) | Dead-box = Off system (disk only)"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What are MAC times in forensics?",
+      "options": [
+        "Mac computer timestamps",
+        "Modified, Accessed, Changed timestamps for files \u2014 used to reconstruct timelines",
+        "Mobile access control times",
+        "Maximum allowed connection times"
+      ],
+      "correct": 1,
+      "explanation": "MAC times are file metadata timestamps: Modified (content changed), Accessed (last opened), Changed/Created (metadata or inode changed). Essential for timeline reconstruction.",
+      "takeaway": "MAC times = Modified + Accessed + Changed timestamps (timeline building)"
+    },
+    {
+      "id": 18,
+      "difficulty": "hard",
+      "question": "What is slack space in forensics?",
+      "options": [
+        "Empty hard drive space",
+        "Residual data between end of file and end of disk cluster \u2014 can contain remnants of old data",
+        "RAM that's not in use",
+        "Network packet padding"
+      ],
+      "correct": 1,
+      "explanation": "Slack space is the area between the logical end of a file and the end of its allocated disk cluster. It can contain remnants of previously deleted file data.",
+      "takeaway": "Slack space = Cluster remainder after file end (may contain old data)"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What is the Locard's Exchange Principle applied to digital forensics?",
+      "options": [
+        "Evidence must be encrypted",
+        "Every digital interaction leaves traces \u2014 attacker always leaves evidence behind",
+        "Evidence must be stored offsite",
+        "All evidence must be witnessed"
+      ],
+      "correct": 1,
+      "explanation": "Locard's principle states that every contact leaves a trace. Digitally: every action leaves artifacts \u2014 log entries, file modifications, registry changes, network packets.",
+      "takeaway": "Locard's principle = Every digital action leaves traceable artifacts"
+    },
+    {
+      "id": 20,
+      "difficulty": "easy",
+      "question": "What is FTK Imager used for?",
+      "options": [
+        "Network scanning",
+        "Creating forensic disk images and previewing evidence without altering original data",
+        "Malware analysis",
+        "Password cracking"
+      ],
+      "correct": 1,
+      "explanation": "FTK Imager (Forensic Toolkit Imager) is a free tool for creating forensic images of drives, previewing evidence, and verifying integrity using hash values.",
+      "takeaway": "FTK Imager = Create forensic disk images + verify integrity (industry standard)"
+    },
+    {
+      "id": 21,
+      "difficulty": "easy",
+      "question": "What is the first step in any digital forensic investigation?",
+      "options": [
+        "Analyze evidence",
+        "Identify and secure the scene \u2014 preserve evidence without contamination",
+        "Delete suspicious files",
+        "Reboot systems immediately"
+      ],
+      "correct": 1,
+      "explanation": "The first step is always to secure and preserve the scene. Rebooting or modifying systems destroys volatile evidence. Proper scene management is critical for legal admissibility.",
+      "takeaway": "First step = Secure and preserve (never alter/reboot before documenting and imaging)"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What is the difference between logical acquisition and physical acquisition?",
+      "options": [
+        "No difference",
+        "Logical = file system level copy (active files only); Physical = bit-for-bit copy of entire media (includes deleted/unallocated)",
+        "Physical acquisition is less complete",
+        "Logical acquisition captures deleted files"
+      ],
+      "correct": 1,
+      "explanation": "Logical acquisition copies only accessible file system data (active files). Physical (bit-for-bit) acquisition copies everything including deleted files, slack space, and unallocated sectors.",
+      "takeaway": "Logical = Active files only | Physical = Everything (bit-for-bit, includes deleted)"
+    },
+    {
+      "id": 23,
+      "difficulty": "easy",
+      "question": "What tool is commonly used for memory forensics on Windows?",
+      "options": [
+        "Wireshark",
+        "Volatility Framework",
+        "FTK Imager",
+        "Autopsy"
+      ],
+      "correct": 1,
+      "explanation": "Volatility Framework is the go-to open-source tool for memory forensics, analyzing RAM dumps from Windows, Linux, and macOS to extract processes, connections, and artifacts.",
+      "takeaway": "Volatility = Memory forensics tool (analyze RAM dumps for processes, artifacts)"
+    },
+    {
+      "id": 24,
+      "difficulty": "hard",
+      "question": "What is prefetch analysis in Windows forensics?",
+      "options": [
+        "Network traffic analysis",
+        "Examining Windows Prefetch files (.pf) to determine which applications ran and when",
+        "Registry analysis",
+        "Browser history analysis"
+      ],
+      "correct": 1,
+      "explanation": "Windows Prefetch files (C:\\Windows\\Prefetch) record application execution \u2014 program name, run count, timestamps, and files accessed. Critical for proving program execution in investigations.",
+      "takeaway": "Prefetch = Windows execution evidence (program name, run count, timestamps)"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What is the LNK file and why is it forensically significant?",
+      "options": [
+        "A Linux kernel file",
+        "A Windows shortcut file containing metadata about accessed files including timestamps, volume info, and original path",
+        "A log file format",
+        "A network configuration file"
+      ],
+      "correct": 1,
+      "explanation": "Windows LNK (shortcut) files contain rich metadata about accessed files: timestamps, file size, original path, volume serial number, and MAC addresses \u2014 even after the original file is deleted.",
+      "takeaway": "LNK file = Windows shortcut with rich metadata (accessed files, paths, even if deleted)"
+    },
+    {
+      "id": 26,
+      "difficulty": "easy",
+      "question": "What is slack space in digital forensics?",
+      "options": [
+        "Unused disk partitions",
+        "The space between the end of a file's data and the end of its last allocated cluster \u2014 may contain remnant data",
+        "Free disk space",
+        "Deleted file data"
+      ],
+      "correct": 1,
+      "explanation": "Slack space is the leftover space at the end of a file's last cluster (since clusters have fixed sizes). It may contain fragments of previously stored data \u2014 valuable forensic evidence.",
+      "takeaway": "Slack space = Gap between file end and cluster end (may contain old data fragments)"
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "What is the MFT (Master File Table) in NTFS forensics?",
+      "options": [
+        "A network routing table",
+        "The core database of NTFS tracking every file and directory with metadata (timestamps, size, permissions, data location)",
+        "A memory allocation table",
+        "A malware detection database"
+      ],
+      "correct": 1,
+      "explanation": "The NTFS MFT is a database containing records for every file and directory, storing metadata (MAC times, size, permissions, attributes) and pointers to data. Critical forensic artifact.",
+      "takeaway": "MFT = NTFS core database for all files (MAC times, attributes, data pointers)"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What is browser forensics and what artifacts are examined?",
+      "options": [
+        "Examining browser source code",
+        "Analyzing browser artifacts: history, cache, cookies, downloads, saved passwords, form data",
+        "Testing browser security",
+        "Browser performance testing"
+      ],
+      "correct": 1,
+      "explanation": "Browser forensics examines artifacts stored by web browsers: visited URLs (history), cached pages/images, cookies, download history, saved credentials, and form auto-fill data.",
+      "takeaway": "Browser forensics = History, cache, cookies, downloads, credentials (all locally stored)"
+    },
+    {
+      "id": 29,
+      "difficulty": "easy",
+      "question": "What is EnCase in digital forensics?",
+      "options": [
+        "A network scanner",
+        "A commercial forensic software suite for disk imaging, analysis, and reporting",
+        "A password cracker",
+        "A network packet analyzer"
+      ],
+      "correct": 1,
+      "explanation": "EnCase (by OpenText, formerly Guidance Software) is a leading commercial forensic platform for acquiring, analyzing, and reporting on digital evidence in law enforcement and corporate investigations.",
+      "takeaway": "EnCase = Leading commercial forensics platform (imaging, analysis, court-ready reports)"
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "What is timeline analysis in forensics?",
+      "options": [
+        "Project scheduling",
+        "Correlating timestamps from multiple sources (filesystem, logs, registry, browser) to reconstruct the sequence of events",
+        "Real-time monitoring",
+        "A type of log analysis only"
+      ],
+      "correct": 1,
+      "explanation": "Timeline analysis correlates timestamps from multiple sources (filesystem MAC times, registry, event logs, browser history, prefetch) to reconstruct a chronological sequence of events.",
+      "takeaway": "Timeline analysis = Correlate multi-source timestamps to reconstruct event sequence"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What is the significance of the $Recycle.Bin folder in Windows forensics?",
+      "options": [
+        "Stores temporary files",
+        "Contains deleted files with metadata: original path, deletion time, original filename \u2014 even if emptied",
+        "Stores system logs",
+        "Contains user profile data"
+      ],
+      "correct": 1,
+      "explanation": "The $Recycle.Bin folder stores deleted files and, more importantly, $I files containing metadata: original file path, deletion timestamp, and original filename \u2014 valuable even if the bin is emptied.",
+      "takeaway": "$Recycle.Bin = Deleted file metadata ($I files: original path, deletion time)"
+    },
+    {
+      "id": 32,
+      "difficulty": "easy",
+      "question": "What is email forensics?",
+      "options": [
+        "Hacking email accounts",
+        "Examination of email artifacts to reconstruct communications, verify sender/receiver, timestamps, and attachments",
+        "Email encryption analysis",
+        "Setting up email servers"
+      ],
+      "correct": 1,
+      "explanation": "Email forensics examines email headers, metadata, message content, attachments, and server logs to reconstruct communications, verify authenticity, and establish timelines.",
+      "takeaway": "Email forensics = Headers, metadata, content analysis (timestamps, sender verification)"
+    },
+    {
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What is JTAG forensics?",
+      "options": [
+        "A programming interface",
+        "A hardware acquisition method accessing device memory via JTAG debug interface when normal methods fail",
+        "A software analysis technique",
+        "A network forensics method"
+      ],
+      "correct": 1,
+      "explanation": "JTAG (Joint Test Action Group) forensics accesses device memory directly through hardware debug ports. Used when software acquisition fails \u2014 common for locked/damaged mobile devices.",
+      "takeaway": "JTAG forensics = Hardware debug port memory access (locked/damaged devices)"
+    },
+    {
+      "id": 34,
+      "difficulty": "medium",
+      "question": "What are Windows Event Logs and why are they important in forensics?",
+      "options": [
+        "Application performance metrics only",
+        "System logs recording security events, application errors, and system activities \u2014 critical for investigation",
+        "Browser history logs",
+        "Network traffic logs"
+      ],
+      "correct": 1,
+      "explanation": "Windows Event Logs (Security, System, Application) record logons, account changes, process creation, policy changes, and more \u2014 critical for reconstructing what happened during an incident.",
+      "takeaway": "Windows Event Logs = Security/System/Application logs (logons, process creation, changes)"
+    },
+    {
+      "id": 35,
+      "difficulty": "easy",
+      "question": "What is the purpose of a forensic workstation?",
+      "options": [
+        "Gaming and entertainment",
+        "A dedicated hardened system used for forensic analysis that is isolated from production networks",
+        "A regular office computer",
+        "A server for storing evidence"
+      ],
+      "correct": 1,
+      "explanation": "A forensic workstation is a hardened, isolated system used exclusively for evidence analysis. It's isolated from networks to prevent contamination and runs specialized forensic software.",
+      "takeaway": "Forensic workstation = Dedicated, isolated, hardened system for evidence analysis"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What is data carving and when is it used?",
+      "options": [
+        "Physically cutting storage media",
+        "Recovering files by scanning raw disk data for file signatures when the filesystem is damaged or deleted",
+        "A data compression technique",
+        "Secure file deletion"
+      ],
+      "correct": 1,
+      "explanation": "Data carving recovers files from raw disk images by searching for known file headers (magic bytes) and footers, used when the filesystem is corrupted, formatted, or deliberately deleted.",
+      "takeaway": "Data carving = Find files by magic bytes in raw disk (no filesystem needed)"
+    },
+    {
+      "id": 37,
+      "difficulty": "medium",
+      "question": "What is the significance of USB forensics?",
+      "options": [
+        "Charging device batteries",
+        "Recovering evidence of USB device connections from Windows registry and log files",
+        "Testing USB speeds",
+        "Blocking USB ports"
+      ],
+      "correct": 1,
+      "explanation": "USB forensics examines Windows Registry keys (USBSTOR, USBEnum), event logs, and setupapi logs to determine which USB devices connected, when, and what drive letter was assigned.",
+      "takeaway": "USB forensics = Registry (USBSTOR) + event logs reveal device connections + timestamps"
+    },
+    {
+      "id": 38,
+      "difficulty": "easy",
+      "question": "What does 'forensically sound' mean?",
+      "options": [
+        "Using sound analysis in investigations",
+        "Evidence handling methods that preserve integrity and ensure evidence is admissible in court",
+        "Using audio forensics",
+        "A high-quality analysis standard"
+      ],
+      "correct": 1,
+      "explanation": "Forensically sound means using accepted methods that preserve evidence integrity \u2014 proper imaging, hashing, documentation, and chain of custody \u2014 ensuring evidence is court-admissible.",
+      "takeaway": "Forensically sound = Integrity-preserving methods ensuring court admissibility"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What is Cellebrite UFED used for?",
+      "options": [
+        "Network packet analysis",
+        "Mobile device forensics \u2014 extracting data from smartphones including locked devices",
+        "Disk imaging",
+        "Memory forensics"
+      ],
+      "correct": 1,
+      "explanation": "Cellebrite UFED (Universal Forensic Extraction Device) is an industry-standard tool for extracting data from mobile devices, including bypassing locks on certain device models.",
+      "takeaway": "Cellebrite UFED = Mobile device forensic extraction (including locked phones)"
+    },
+    {
+      "id": 40,
+      "difficulty": "medium",
+      "question": "What is the purpose of a forensic hash in court?",
+      "options": [
+        "Speed up evidence analysis",
+        "Prove evidence integrity \u2014 matching hashes before and after analysis prove no tampering occurred",
+        "Encrypt evidence files",
+        "Compress evidence data"
+      ],
+      "correct": 1,
+      "explanation": "In court, forensic hashes (MD5/SHA-256 of evidence at collection and after analysis) prove the evidence was not altered during investigation \u2014 establishing a verifiable chain of integrity.",
+      "takeaway": "Forensic hash in court = Proves evidence unaltered (before hash = after hash = untampered)"
+    }
+  ]
+}

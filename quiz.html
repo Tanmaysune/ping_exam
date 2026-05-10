@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ping_exams — Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles/style.css"/>
+</head>
+<body>
+
+<canvas id="bgCanvas" class="bg-canvas"></canvas>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-link">
+      <svg width="200" height="48" viewBox="0 0 200 48" xmlns="http://www.w3.org/2000/svg">
+        <text x="4" y="36" font-family="Caveat,cursive" font-size="32" font-weight="800" fill="var(--logo-dark)">ping</text>
+        <text x="52" y="36" font-family="Caveat,cursive" font-size="32" font-weight="800" fill="#e67e22">_exams</text>
+        <circle cx="176" cy="25" r="5" fill="#27ae60"/>
+      </svg>
+    </a>
+    <div class="header-right">
+      <div class="clock-widget">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span id="liveClock" class="live-clock">--:--:--</span>
+        <span id="timezoneLabel" class="tz-label"></span>
+      </div>
+      <div class="theme-toggle-group">
+        <button class="theme-btn" id="btn-light" title="Light" onclick="setTheme('light')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="theme-btn" id="btn-dark" title="Dark" onclick="setTheme('dark')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="theme-btn" id="btn-system" title="System" onclick="setTheme('system')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- QUIZ WRAPPER -->
+<div class="quiz-page-wrap">
+
+  <!-- LEFT PANEL: Subject Info + Mode Selector + Stats -->
+  <aside class="quiz-sidebar">
+    <a href="index.html" class="back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      All Subjects
+    </a>
+
+    <div class="subject-info-card">
+      <div id="subjectIcon" class="subject-icon-big"></div>
+      <h2 id="subjectName" class="subject-name-big">Loading...</h2>
+      <p id="subjectFile" class="subject-file-label"></p>
+    </div>
+
+    <!-- Mode Selector -->
+    <div class="mode-selector-card">
+      <p class="mode-label-text">Quiz Mode</p>
+      <div class="mode-btns">
+        <button class="mode-btn active" id="btn-practice" onclick="switchMode('practice')">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          Practice
+        </button>
+        <button class="mode-btn" id="btn-exam" onclick="switchMode('exam')">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Exam
+        </button>
+        <button class="mode-btn" id="btn-infinity" onclick="switchMode('infinity')">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18.178 8c5.096 0 5.096 8 0 8-5.095 0-7.133-8-12.739-8-4.585 0-4.585 8 0 8 5.606 0 7.644-8 12.739-8z"/></svg>
+          Infinity
+        </button>
+      </div>
+    </div>
+
+    <!-- Exam mode start + timer (hidden by default) -->
+    <div id="examStartCard" class="exam-start-card" style="display:none">
+      <div id="examTimerDisplay" class="exam-timer-display">60:00</div>
+      <button id="startExamBtn" class="start-exam-btn" onclick="startExamTimer()">
+        &#9654; Start Exam Timer
+      </button>
+    </div>
+
+    <!-- Infinity difficulty selector -->
+    <div id="infinityCard" class="infinity-card" style="display:none">
+      <p class="mode-label-text">Difficulty Filter</p>
+      <div class="diff-btns">
+        <button class="diff-btn active" onclick="setDifficulty('all')">All</button>
+        <button class="diff-btn" onclick="setDifficulty('easy')">Easy</button>
+        <button class="diff-btn" onclick="setDifficulty('medium')">Medium</button>
+        <button class="diff-btn" onclick="setDifficulty('hard')">Hard</button>
+      </div>
+      <button class="view-score-btn" onclick="showInfinityScore()" style="margin-top:10px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        View My Score
+      </button>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-card">
+      <div class="stat-row">
+        <div class="stat-item stat-correct">
+          <span class="stat-icon">✓</span>
+          <span class="stat-val" id="statCorrect">0</span>
+          <span class="stat-lbl2">Correct</span>
+        </div>
+        <div class="stat-item stat-wrong">
+          <span class="stat-icon">✗</span>
+          <span class="stat-val" id="statWrong">0</span>
+          <span class="stat-lbl2">Wrong</span>
+        </div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-item stat-skipped">
+          <span class="stat-icon">&#8594;</span>
+          <span class="stat-val" id="statSkipped">0</span>
+          <span class="stat-lbl2">Skipped</span>
+        </div>
+        <div class="stat-item stat-remain" id="remainBox">
+          <span class="stat-icon">&#9632;</span>
+          <span class="stat-val" id="statRemain">—</span>
+          <span class="stat-lbl2">Remain</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Random Q Button -->
+    <button class="random-btn" onclick="goRandomQuestion()">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
+      Random Question
+    </button>
+
+    <!-- Progress bar (practice + exam) -->
+    <div class="progress-wrap">
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <span class="progress-label" id="progressLabel">0 / 0</span>
+    </div>
+
+    <!-- Infinity mode progress bar -->
+    <div class="inf-progress-wrap" id="infinityProgressWrap" style="display:none">
+      <div class="inf-progress-top">
+        <span class="inf-progress-lbl">Questions Solved</span>
+        <span class="inf-progress-val" id="infProgressLabel">0 / 0 answered</span>
+      </div>
+      <div class="inf-progress-track">
+        <div class="inf-progress-fill" id="infProgressFill" style="width:0%"></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN QUIZ AREA -->
+  <main class="quiz-main">
+
+    <!-- Loading state -->
+    <div id="loadingState" class="loading-state">
+      <div class="spinner"></div>
+      <p>Loading questions...</p>
+    </div>
+
+    <!-- Exam finished screen -->
+    <div id="examResultScreen" class="exam-result-screen" style="display:none">
+      <div class="result-emoji">🎓</div>
+      <h2 class="result-title">Exam Complete!</h2>
+      <div class="result-grid">
+        <div class="res-box res-c"><span id="resFinalCorrect">0</span><small>Correct</small></div>
+        <div class="res-box res-w"><span id="resFinalWrong">0</span><small>Wrong</small></div>
+        <div class="res-box res-s"><span id="resFinalSkipped">0</span><small>Skipped</small></div>
+        <div class="res-box res-p"><span id="resFinalPercent">0%</span><small>Score</small></div>
+      </div>
+      <div class="result-actions">
+        <button class="btn-restart" id="resultRestartBtn" onclick="restartExam()">Retake Exam</button>
+        <a href="index.html" class="btn-home">Back to Subjects</a>
+      </div>
+    </div>
+
+    <!-- Quiz card -->
+    <div id="quizCard" class="quiz-card" style="display:none">
+      <div class="qcard-top">
+        <div class="q-meta">
+          <span class="q-num" id="qNum">Q 1</span>
+          <span class="q-diff-badge" id="qDiff">Easy</span>
+        </div>
+        <span class="q-progress-text" id="qProgressText">1 of 20</span>
+      </div>
+
+      <h2 class="question-text" id="questionText">Question goes here...</h2>
+
+      <div class="options-grid" id="optionsGrid">
+        <!-- Options injected by JS -->
+      </div>
+
+      <!-- Explanation box -->
+      <div class="explanation-box" id="explanationBox" style="display:none">
+        <div class="expl-header" id="explHeader">
+          <span class="expl-icon" id="explIcon">✓</span>
+          <span class="expl-title" id="explTitle">Correct!</span>
+        </div>
+        <p class="expl-text" id="explText"></p>
+        <div class="expl-takeaway">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <strong>Key Takeaway:</strong> <span id="explTakeaway"></span>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="quiz-controls">
+        <button class="ctrl-btn btn-prev" id="btnPrev" onclick="prevQuestion()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          Prev
+        </button>
+        <button class="ctrl-btn btn-skip" id="btnSkip" onclick="skipQuestion()">
+          Skip
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/></svg>
+        </button>
+        <button class="ctrl-btn btn-submit" id="btnSubmit" onclick="submitAnswer()">
+          Submit
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        </button>
+        <button class="ctrl-btn btn-next" id="btnNext" onclick="nextQuestion()">
+          Next
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Question navigator (mini dots) -->
+    <div class="q-navigator" id="qNavigator" style="display:none">
+      <p class="nav-label">Question Navigator</p>
+      <div class="nav-dots" id="navDots"></div>
+    </div>
+
+  </main>
+</div>
+
+
+<script src="scripts/quiz.js"></script>
+<script src="scripts/app.js"></script>
+</body>
+</html>
