@@ -1,0 +1,565 @@
+{
+  "subject": "Aptitude",
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What is 15% of 200?",
+      "options": [
+        "25",
+        "30",
+        "35",
+        "40"
+      ],
+      "correct": 1,
+      "explanation": "15% of 200 = (15/100) x 200 = 30.",
+      "takeaway": "Percentage = (Part/100) x Whole"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "A train travels 60 km in 1.5 hours. What is its speed?",
+      "options": [
+        "30 km/h",
+        "40 km/h",
+        "45 km/h",
+        "50 km/h"
+      ],
+      "correct": 1,
+      "explanation": "Speed = Distance / Time = 60 / 1.5 = 40 km/h.",
+      "takeaway": "Speed = Distance / Time"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "Find the next number in the series: 2, 4, 8, 16, ?",
+      "options": [
+        "20",
+        "24",
+        "32",
+        "18"
+      ],
+      "correct": 2,
+      "explanation": "Each term is multiplied by 2: 16 x 2 = 32.",
+      "takeaway": "Look for multiplicative patterns in number series"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "If the ratio of two numbers is 3:5 and their sum is 40, what is the smaller number?",
+      "options": [
+        "12",
+        "15",
+        "18",
+        "20"
+      ],
+      "correct": 1,
+      "explanation": "Total parts = 3+5 = 8. Smaller number = (3/8) x 40 = 15.",
+      "takeaway": "Divide the sum according to ratio parts"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What is the average of 10, 20, 30, 40, and 50?",
+      "options": [
+        "25",
+        "30",
+        "35",
+        "40"
+      ],
+      "correct": 1,
+      "explanation": "Average = Sum of terms / Number of terms = 150 / 5 = 30.",
+      "takeaway": "Average = Sum / Count"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "A shopkeeper buys an item for Rs.200 and sells it for Rs.250. What is the profit percentage?",
+      "options": [
+        "20%",
+        "25%",
+        "30%",
+        "50%"
+      ],
+      "correct": 1,
+      "explanation": "Profit = 250 - 200 = 50. Profit% = (50/200) x 100 = 25%.",
+      "takeaway": "Profit% = (Profit/Cost Price) x 100"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What comes next in the letter series: A, C, E, G, ?",
+      "options": [
+        "H",
+        "I",
+        "J",
+        "K"
+      ],
+      "correct": 1,
+      "explanation": "The series skips one letter each time: A(+2)C(+2)E(+2)G(+2)I.",
+      "takeaway": "Letter series often follow a fixed skip pattern"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "If a car covers 240 km in 4 hours, how long will it take to cover 360 km at the same speed?",
+      "options": [
+        "5 hours",
+        "6 hours",
+        "7 hours",
+        "8 hours"
+      ],
+      "correct": 1,
+      "explanation": "Speed = 240/4 = 60 km/h. Time = 360/60 = 6 hours.",
+      "takeaway": "Time = Distance / Speed"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What is the LCM of 4 and 6?",
+      "options": [
+        "8",
+        "10",
+        "12",
+        "24"
+      ],
+      "correct": 2,
+      "explanation": "Multiples of 4: 4,8,12... Multiples of 6: 6,12... The smallest common multiple is 12.",
+      "takeaway": "LCM is the smallest number divisible by all given numbers"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What is the HCF of 18 and 24?",
+      "options": [
+        "2",
+        "3",
+        "6",
+        "9"
+      ],
+      "correct": 2,
+      "explanation": "Factors of 18: 1,2,3,6,9,18. Factors of 24: 1,2,3,4,6,8,12,24. Highest common factor is 6.",
+      "takeaway": "HCF is the largest number that divides all given numbers exactly"
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "A sum of Rs.1000 is invested at 10% simple interest per annum. What is the interest after 3 years?",
+      "options": [
+        "Rs.100",
+        "Rs.200",
+        "Rs.300",
+        "Rs.330"
+      ],
+      "correct": 2,
+      "explanation": "SI = (P x R x T)/100 = (1000 x 10 x 3)/100 = 300.",
+      "takeaway": "Simple Interest = (Principal x Rate x Time)/100"
+    },
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "question": "Rs.5000 is invested at 10% compound interest annually. What is the amount after 2 years?",
+      "options": [
+        "Rs.5500",
+        "Rs.6000",
+        "Rs.6050",
+        "Rs.6100"
+      ],
+      "correct": 2,
+      "explanation": "Amount = P(1+R/100)^T = 5000 x 1.1 x 1.1 = 6050.",
+      "takeaway": "Compound Interest Amount = P(1 + R/100)^T"
+    },
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "question": "Two pipes can fill a tank in 6 hours and 8 hours respectively. Approximately how long will they take to fill it together?",
+      "options": [
+        "3.4 hours",
+        "4 hours",
+        "5 hours",
+        "7 hours"
+      ],
+      "correct": 0,
+      "explanation": "Combined rate = 1/6 + 1/8 = 7/24. Time = 24/7 which is about 3.4 hours.",
+      "takeaway": "Combined work rate = sum of individual rates; Time = 1/(combined rate)"
+    },
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "question": "A boat travels 30 km downstream in 2 hours and 30 km upstream in 5 hours. What is the speed of the boat in still water?",
+      "options": [
+        "9 km/h",
+        "10.5 km/h",
+        "12 km/h",
+        "15 km/h"
+      ],
+      "correct": 1,
+      "explanation": "Downstream speed = 30/2 = 15 km/h. Upstream speed = 30/5 = 6 km/h. Speed in still water = (15+6)/2 = 10.5 km/h.",
+      "takeaway": "Speed in still water = (Downstream speed + Upstream speed)/2"
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "The average age of 5 people is 30 years. If a 6th person joins and the new average becomes 32, what is the age of the 6th person?",
+      "options": [
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "correct": 2,
+      "explanation": "Total age of 5 people = 150. New total for 6 people = 32 x 6 = 192. Age of 6th person = 192 - 150 = 42.",
+      "takeaway": "Use total sum before and after to find the new element's value"
+    },
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "question": "If 8 workers can complete a task in 15 days, how many days will 12 workers take to complete the same task?",
+      "options": [
+        "8 days",
+        "10 days",
+        "12 days",
+        "20 days"
+      ],
+      "correct": 1,
+      "explanation": "Work is constant: 8 x 15 = 120 worker-days. Days for 12 workers = 120/12 = 10 days.",
+      "takeaway": "Workers x Days = Constant (Total Work)"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "A number is increased by 20% and then decreased by 20%. What is the net percentage change?",
+      "options": [
+        "No change",
+        "4% decrease",
+        "4% increase",
+        "2% decrease"
+      ],
+      "correct": 1,
+      "explanation": "Net change = -(x^2/100) where x=20, so -400/100 = -4%, a 4% decrease.",
+      "takeaway": "Successive % increase then equal % decrease results in a net decrease of x^2/100"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Find the missing number in the series: 3, 6, 11, 18, 27, ?",
+      "options": [
+        "36",
+        "38",
+        "40",
+        "42"
+      ],
+      "correct": 1,
+      "explanation": "Differences are 3,5,7,9,11 (odd numbers increasing by 2). 27+11=38.",
+      "takeaway": "Check the pattern of differences between consecutive terms"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "In a class, the ratio of boys to girls is 4:3. If there are 28 boys, how many girls are there?",
+      "options": [
+        "18",
+        "21",
+        "24",
+        "27"
+      ],
+      "correct": 1,
+      "explanation": "4 parts = 28, so 1 part = 7. Girls = 3 parts = 3 x 7 = 21.",
+      "takeaway": "Use unit value from ratio to find other quantities"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "A can do a piece of work in 10 days and B can do it in 15 days. How many days will they take together?",
+      "options": [
+        "5 days",
+        "6 days",
+        "8 days",
+        "12 days"
+      ],
+      "correct": 1,
+      "explanation": "Combined rate = 1/10 + 1/15 = 5/30 = 1/6. Together they take 6 days.",
+      "takeaway": "Add individual work rates to get combined rate, then invert"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "If SUN is coded as TVO, how is MOON coded using the same letter-shift rule?",
+      "options": [
+        "NPPO",
+        "NPOP",
+        "OQPO",
+        "MPPO"
+      ],
+      "correct": 0,
+      "explanation": "Each letter is shifted forward by 1: M to N, O to P, O to P, N to O, giving NPPO.",
+      "takeaway": "Apply the same letter-shift rule consistently to each character"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "A sells an item to B at a profit of 20%, and B sells it to C at a profit of 10%. If C pays Rs.264, what was the original cost price for A?",
+      "options": [
+        "Rs.180",
+        "Rs.200",
+        "Rs.220",
+        "Rs.240"
+      ],
+      "correct": 1,
+      "explanation": "Let CP = x. x x 1.2 x 1.1 = 264, so x x 1.32 = 264, giving x = 200.",
+      "takeaway": "Chain successive percentage increases by multiplying factors"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What is the probability of getting a head when a fair coin is tossed once?",
+      "options": [
+        "0",
+        "1/4",
+        "1/2",
+        "1"
+      ],
+      "correct": 2,
+      "explanation": "A fair coin has 2 equally likely outcomes; probability of head = 1/2.",
+      "takeaway": "Probability = Favorable outcomes / Total outcomes"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "A bag contains 4 red and 6 blue balls. What is the probability of drawing a red ball?",
+      "options": [
+        "2/5",
+        "3/5",
+        "1/2",
+        "1/3"
+      ],
+      "correct": 0,
+      "explanation": "Total balls = 10, red balls = 4. Probability = 4/10 = 2/5.",
+      "takeaway": "Probability = Favorable / Total outcomes"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "Simplify: 12 / 4 x (3 + 2) - 5",
+      "options": [
+        "10",
+        "15",
+        "20",
+        "25"
+      ],
+      "correct": 0,
+      "explanation": "Following BODMAS: 12/4=3, 3x5=15, 15-5=10.",
+      "takeaway": "Follow BODMAS/PEMDAS order of operations"
+    },
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "question": "The sum of the ages of a father and son is 45 years. Five years ago, the father's age was 4 times the son's age. What is the son's current age?",
+      "options": [
+        "10 years",
+        "12 years",
+        "13 years",
+        "15 years"
+      ],
+      "correct": 1,
+      "explanation": "Let son's age = x, father's = 45-x. Five years ago: 45-x-5 = 4(x-5). So 40-x = 4x-20, 60=5x, x=12.",
+      "takeaway": "Translate word problems into linear equations using given time offsets"
+    },
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "question": "A train 200 m long is running at a speed of 60 km/h. How long will it take to cross a platform 300 m long?",
+      "options": [
+        "20 sec",
+        "25 sec",
+        "30 sec",
+        "35 sec"
+      ],
+      "correct": 2,
+      "explanation": "Total distance = 200+300 = 500 m. Speed = 60 km/h is about 16.67 m/s. Time = 500/16.67 is about 30 sec.",
+      "takeaway": "Time to cross platform = (Train length + Platform length) / Speed"
+    },
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "question": "If the price of sugar increases by 25%, by what percentage should consumption be reduced to keep expenditure unchanged?",
+      "options": [
+        "15%",
+        "20%",
+        "25%",
+        "30%"
+      ],
+      "correct": 1,
+      "explanation": "Reduction% = (R/(100+R)) x 100 = (25/125) x 100 = 20%.",
+      "takeaway": "Reduction% = (Increase/(100+Increase)) x 100"
+    },
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "question": "A alone can finish a work in 12 days and B alone in 18 days. They work together for 4 days, then A leaves. In how many more days will B finish the remaining work?",
+      "options": [
+        "6 days",
+        "7 days",
+        "8 days",
+        "9 days"
+      ],
+      "correct": 2,
+      "explanation": "Combined rate = 1/12+1/18 = 5/36. Work done in 4 days = 20/36 = 5/9. Remaining = 4/9. B's rate = 1/18. Days for B = (4/9) divided by (1/18) = 8.",
+      "takeaway": "Compute work done together first, then find remaining work for the single worker"
+    },
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "question": "The compound interest on Rs.8000 for 2 years at 5% per annum, compounded annually, is:",
+      "options": [
+        "Rs.800",
+        "Rs.820",
+        "Rs.840",
+        "Rs.850"
+      ],
+      "correct": 1,
+      "explanation": "Amount = 8000 x 1.05 x 1.05 = 8820. CI = 8820-8000 = 820.",
+      "takeaway": "CI = Amount - Principal, where Amount = P(1+R/100)^T"
+    },
+    {
+      "id": 31,
+      "difficulty": "hard",
+      "question": "A man rows 750 m upstream in 675 seconds and returns downstream in 450 seconds. What is his rowing speed in still water?",
+      "options": [
+        "4 km/h",
+        "5 km/h",
+        "6 km/h",
+        "8 km/h"
+      ],
+      "correct": 1,
+      "explanation": "Upstream speed = 750/675 m/s which is about 1.11 m/s, or 4 km/h. Downstream speed = 750/450 m/s which is about 1.67 m/s, or 6 km/h. Speed in still water = (4+6)/2 = 5 km/h.",
+      "takeaway": "Convert time and distance carefully, then apply the still-water speed formula"
+    },
+    {
+      "id": 32,
+      "difficulty": "hard",
+      "question": "In how many ways can the letters of the word 'LEADER' be arranged?",
+      "options": [
+        "120",
+        "360",
+        "720",
+        "1440"
+      ],
+      "correct": 1,
+      "explanation": "LEADER has 6 letters with E repeating twice. Arrangements = 6! / 2! = 720 / 2 = 360.",
+      "takeaway": "For words with repeated letters, divide total permutations by factorial of repeat counts"
+    },
+    {
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Find the odd one out: 121, 144, 169, 200, 225",
+      "options": [
+        "144",
+        "169",
+        "200",
+        "225"
+      ],
+      "correct": 2,
+      "explanation": "121=11^2, 144=12^2, 169=13^2, 225=15^2 are perfect squares; 200 is not a perfect square.",
+      "takeaway": "Odd-one-out puzzles often hinge on a shared mathematical property"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "A alone can do a job in 20 days, and with B's help finishes it in 12 days. How long would B alone take?",
+      "options": [
+        "25 days",
+        "28 days",
+        "30 days",
+        "32 days"
+      ],
+      "correct": 2,
+      "explanation": "Combined rate = 1/12. A's rate = 1/20. B's rate = 1/12 - 1/20 = 5/60 - 3/60 = 1/30. B alone takes 30 days.",
+      "takeaway": "Subtract the individual rate from the combined rate to isolate the unknown worker's rate"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "Two dice are rolled together. What is the probability of getting a sum of 7?",
+      "options": [
+        "1/6",
+        "1/9",
+        "1/12",
+        "5/36"
+      ],
+      "correct": 0,
+      "explanation": "Total outcomes = 36. Favorable combinations for sum 7: (1,6)(2,5)(3,4)(4,3)(5,2)(6,1), which is 6 outcomes. Probability = 6/36 = 1/6.",
+      "takeaway": "List favorable outcomes carefully when working with two dice"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "A sum of money doubles itself in 8 years at simple interest. In how many years will it triple?",
+      "options": [
+        "12 years",
+        "16 years",
+        "20 years",
+        "24 years"
+      ],
+      "correct": 1,
+      "explanation": "Doubling in 8 years means SI = P in 8 years, giving rate R = 12.5%. To triple, SI needed = 2P. Time = (2P x 100)/(P x 12.5) = 16 years.",
+      "takeaway": "Use the doubling condition to first find the rate, then compute other multiples"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "A vessel contains a mixture of milk and water in the ratio 5:1. If the mixture contains 12 liters of water, how many liters of milk are there?",
+      "options": [
+        "48 liters",
+        "54 liters",
+        "60 liters",
+        "72 liters"
+      ],
+      "correct": 2,
+      "explanation": "1 part = 12 liters (water). Milk = 5 parts = 5 x 12 = 60 liters.",
+      "takeaway": "Use the given single-part quantity to scale up ratio-based mixtures"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "A shopkeeper marks an item 40% above cost price and gives a discount of 10%. What is his profit percentage?",
+      "options": [
+        "24%",
+        "26%",
+        "30%",
+        "36%"
+      ],
+      "correct": 1,
+      "explanation": "Let CP = 100. Marked price = 140. Selling price after 10% discount = 140 x 0.9 = 126. Profit% = 26%.",
+      "takeaway": "Apply markup first, then discount on the marked price to find selling price"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "A and B together can complete a task in 8 days. A alone can do it in 12 days. In how many days can B alone complete it?",
+      "options": [
+        "20 days",
+        "24 days",
+        "28 days",
+        "32 days"
+      ],
+      "correct": 1,
+      "explanation": "Combined rate = 1/8. A's rate = 1/12. B's rate = 1/8 - 1/12 = 3/24 - 2/24 = 1/24. B alone takes 24 days.",
+      "takeaway": "Subtract known rate from combined rate to find the unknown worker's individual rate"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "The next term in the series 1, 4, 9, 16, 25, ? is:",
+      "options": [
+        "30",
+        "32",
+        "36",
+        "40"
+      ],
+      "correct": 2,
+      "explanation": "This is the sequence of perfect squares: 1^2, 2^2, 3^2, 4^2, 5^2, 6^2. The next term is 6^2 = 36.",
+      "takeaway": "Recognize perfect-square series by checking n^2 for consecutive n"
+    }
+  ]
+}

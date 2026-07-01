@@ -16,6 +16,7 @@ const SUBJECT_MAP = {
   PKI:           { file: 'PKI_Public_Key_Infrastructure_MCQ.json',              name: 'PKI — Public Key Infrastructure',           icon: '🔑' },
   Programming:   { file: 'Programming_Concepts_MCQ.json',                       name: 'Programming Concepts',                       icon: '💻' },
   Ports:         { file: 'Ports_Network_Port_Numbers_MCQ.json',                  name: 'Ports — Network Port Numbers',               icon: '🔌' },
+  Aptitude:      { file: 'Aptitude_MCQ.json',                                   name: 'Aptitude',                                   icon: '🧮' },
 };
 
 // ---- State ----
